@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [Bmob registerWithAppKey:@"2f48f71d21394658ac8760da587b2bc0"];
+    [Bmob registerWithAppKey:@"6cd4eb4177a9c555fd390704c67e5e2d"];
     return YES;
 }
 

@@ -13,6 +13,7 @@
 
 @end
 
+//7xtf1s.com1.z0.glb.clouddn.com
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -20,24 +21,22 @@
 
     BmobQuery   *bquery = [BmobQuery queryWithClassName:@"_User"];
     //查找GameScore表里面id为0c6db13c的数据
-    [bquery getObjectInBackgroundWithId:@"wY8Xeeeg" block:^(BmobObject *object,NSError *error){
-        if (error){
+    [bquery getObjectInBackgroundWithId:@"5d2jgggq" block:^(BmobObject *object,NSError *error){
+        if (error)
+        {
             //进行错误处理
-        }else{
+        }
+        else
+        {
             //表里有id为0c6db13c的数据
-            if (object) {
-                //得到playerName和cheatMode
-//                NSString *playerName = [object objectForKey:@"playerName"];
-//                BOOL cheatMode = [[object objectForKey:@"cheatMode"] boolValue];
-//                NSLog(@"%@----%i",playerName,cheatMode);
+            if (object)
+            {
+                NSString *playerName = [object objectForKey:@"username"];
+                NSLog(@"%@",playerName);
             }
         }
     }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end
