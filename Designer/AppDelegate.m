@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <BmobSDK/Bmob.h>
+#import <MobClick.h>
 
 @interface AppDelegate ()
 
@@ -15,10 +16,15 @@
 
 @implementation AppDelegate
 
+#define BombAppKey @"6cd4eb4177a9c555fd390704c67e5e2d"
+#define MobAppKey  @"571f6d0ce0f55a8343002562"
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    [Bmob registerWithAppKey:@"6cd4eb4177a9c555fd390704c67e5e2d"];
+    
+    [Bmob registerWithAppKey:BombAppKey];
+    [MobClick startWithAppkey:MobAppKey];
+    [[DSNetWork sharedNetWork] configureReachManager];
+
     return YES;
 }
 

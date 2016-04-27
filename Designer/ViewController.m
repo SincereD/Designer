@@ -18,7 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     BmobQuery   *bquery = [BmobQuery queryWithClassName:@"_User"];
     //查找GameScore表里面id为0c6db13c的数据
     [bquery getObjectInBackgroundWithId:@"5d2jgggq" block:^(BmobObject *object,NSError *error){

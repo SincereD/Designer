@@ -25,6 +25,20 @@
 		C63533C01CC5E70700D5AA60 /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C63533BF1CC5E70700D5AA60 /* libz.1.1.3.tbd */; };
 		C63533C21CC5E70F00D5AA60 /* libicucore.A.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C63533C11CC5E70F00D5AA60 /* libicucore.A.tbd */; };
 		C63533C41CC5E71B00D5AA60 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C63533C31CC5E71B00D5AA60 /* libsqlite3.0.tbd */; };
+		C693C4041CD0EA020039870F /* DSNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = C693C4031CD0EA020039870F /* DSNetWork.m */; };
+		C693C4081CD0F5130039870F /* DSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C693C4071CD0F5130039870F /* DSRequest.m */; };
+		C693C40C1CD0F5EA0039870F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C693C40A1CD0F5EA0039870F /* MainViewController.m */; };
+		C693C4101CD0F6280039870F /* DSWelcomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C693C40F1CD0F6280039870F /* DSWelcomViewController.m */; };
+		C693C4231CD0F8040039870F /* DSDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = C693C4141CD0F8030039870F /* DSDevice.m */; };
+		C693C4241CD0F8040039870F /* NSString+URLString.m in Sources */ = {isa = PBXBuildFile; fileRef = C693C4161CD0F8040039870F /* NSString+URLString.m */; };
+		C693C4251CD0F8040039870F /* NSString+DSEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = C693C4181CD0F8040039870F /* NSString+DSEncrypt.m */; };
+		C693C4261CD0F8040039870F /* NSString+DSPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = C693C41A1CD0F8040039870F /* NSString+DSPredicate.m */; };
+		C693C4271CD0F8040039870F /* UIColor+DSHexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C693C41C1CD0F8040039870F /* UIColor+DSHexColor.m */; };
+		C693C4281CD0F8040039870F /* UIScreen+DSScreenSize.m in Sources */ = {isa = PBXBuildFile; fileRef = C693C41E1CD0F8040039870F /* UIScreen+DSScreenSize.m */; };
+		C693C4291CD0F8040039870F /* UIView+DSCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = C693C4201CD0F8040039870F /* UIView+DSCapture.m */; };
+		C693C42A1CD0F8040039870F /* DSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C693C4221CD0F8040039870F /* DSBaseViewController.m */; };
+		C693C42E1CD0FC430039870F /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C693C42C1CD0FC430039870F /* InfoViewController.m */; };
+		C693C42F1CD0FC430039870F /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C693C42D1CD0FC430039870F /* InfoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +65,35 @@
 		C63533BF1CC5E70700D5AA60 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
 		C63533C11CC5E70F00D5AA60 /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
 		C63533C31CC5E71B00D5AA60 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		C693C4021CD0EA020039870F /* DSNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSNetWork.h; sourceTree = "<group>"; };
+		C693C4031CD0EA020039870F /* DSNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSNetWork.m; sourceTree = "<group>"; };
+		C693C4051CD0EDD50039870F /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C693C4061CD0F5130039870F /* DSRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRequest.h; sourceTree = "<group>"; };
+		C693C4071CD0F5130039870F /* DSRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRequest.m; sourceTree = "<group>"; };
+		C693C4091CD0F5EA0039870F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		C693C40A1CD0F5EA0039870F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		C693C40E1CD0F6280039870F /* DSWelcomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSWelcomViewController.h; sourceTree = "<group>"; };
+		C693C40F1CD0F6280039870F /* DSWelcomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSWelcomViewController.m; sourceTree = "<group>"; };
+		C693C4121CD0F8030039870F /* DSCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCommon.h; sourceTree = "<group>"; };
+		C693C4131CD0F8030039870F /* DSDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDevice.h; sourceTree = "<group>"; };
+		C693C4141CD0F8030039870F /* DSDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDevice.m; sourceTree = "<group>"; };
+		C693C4151CD0F8040039870F /* NSString+URLString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLString.h"; sourceTree = "<group>"; };
+		C693C4161CD0F8040039870F /* NSString+URLString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLString.m"; sourceTree = "<group>"; };
+		C693C4171CD0F8040039870F /* NSString+DSEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DSEncrypt.h"; sourceTree = "<group>"; };
+		C693C4181CD0F8040039870F /* NSString+DSEncrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DSEncrypt.m"; sourceTree = "<group>"; };
+		C693C4191CD0F8040039870F /* NSString+DSPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DSPredicate.h"; sourceTree = "<group>"; };
+		C693C41A1CD0F8040039870F /* NSString+DSPredicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DSPredicate.m"; sourceTree = "<group>"; };
+		C693C41B1CD0F8040039870F /* UIColor+DSHexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DSHexColor.h"; sourceTree = "<group>"; };
+		C693C41C1CD0F8040039870F /* UIColor+DSHexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DSHexColor.m"; sourceTree = "<group>"; };
+		C693C41D1CD0F8040039870F /* UIScreen+DSScreenSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+DSScreenSize.h"; sourceTree = "<group>"; };
+		C693C41E1CD0F8040039870F /* UIScreen+DSScreenSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+DSScreenSize.m"; sourceTree = "<group>"; };
+		C693C41F1CD0F8040039870F /* UIView+DSCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DSCapture.h"; sourceTree = "<group>"; };
+		C693C4201CD0F8040039870F /* UIView+DSCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DSCapture.m"; sourceTree = "<group>"; };
+		C693C4211CD0F8040039870F /* DSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSBaseViewController.h; sourceTree = "<group>"; };
+		C693C4221CD0F8040039870F /* DSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSBaseViewController.m; sourceTree = "<group>"; };
+		C693C42B1CD0FC430039870F /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		C693C42C1CD0FC430039870F /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		C693C42D1CD0FC430039870F /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
 		FC12A030729C1B66ED14CC86 /* libPods-Designer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Designer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -110,8 +153,15 @@
 				C63533C51CC5E73000D5AA60 /* FrameWork */,
 				C635339B1CC5E5BE00D5AA60 /* AppDelegate.h */,
 				C635339C1CC5E5BE00D5AA60 /* AppDelegate.m */,
+				C693C4111CD0F7F50039870F /* DSCommon */,
+				C693C4091CD0F5EA0039870F /* MainViewController.h */,
+				C693C40A1CD0F5EA0039870F /* MainViewController.m */,
+				C693C42B1CD0FC430039870F /* InfoViewController.h */,
+				C693C42C1CD0FC430039870F /* InfoViewController.m */,
+				C693C42D1CD0FC430039870F /* InfoViewController.xib */,
 				C635339E1CC5E5BE00D5AA60 /* ViewController.h */,
 				C635339F1CC5E5BE00D5AA60 /* ViewController.m */,
+				C693C4051CD0EDD50039870F /* PrefixHeader.pch */,
 				C63533A11CC5E5BE00D5AA60 /* Main.storyboard */,
 				C63533A41CC5E5BE00D5AA60 /* Assets.xcassets */,
 				C63533A61CC5E5BE00D5AA60 /* LaunchScreen.storyboard */,
@@ -145,6 +195,36 @@
 				C63533AF1CC5E5E400D5AA60 /* BmobSDK.framework */,
 			);
 			name = FrameWork;
+			sourceTree = "<group>";
+		};
+		C693C4111CD0F7F50039870F /* DSCommon */ = {
+			isa = PBXGroup;
+			children = (
+				C693C4121CD0F8030039870F /* DSCommon.h */,
+				C693C4021CD0EA020039870F /* DSNetWork.h */,
+				C693C4031CD0EA020039870F /* DSNetWork.m */,
+				C693C4061CD0F5130039870F /* DSRequest.h */,
+				C693C4071CD0F5130039870F /* DSRequest.m */,
+				C693C4131CD0F8030039870F /* DSDevice.h */,
+				C693C4141CD0F8030039870F /* DSDevice.m */,
+				C693C4151CD0F8040039870F /* NSString+URLString.h */,
+				C693C4161CD0F8040039870F /* NSString+URLString.m */,
+				C693C4171CD0F8040039870F /* NSString+DSEncrypt.h */,
+				C693C4181CD0F8040039870F /* NSString+DSEncrypt.m */,
+				C693C4191CD0F8040039870F /* NSString+DSPredicate.h */,
+				C693C41A1CD0F8040039870F /* NSString+DSPredicate.m */,
+				C693C41B1CD0F8040039870F /* UIColor+DSHexColor.h */,
+				C693C41C1CD0F8040039870F /* UIColor+DSHexColor.m */,
+				C693C41D1CD0F8040039870F /* UIScreen+DSScreenSize.h */,
+				C693C41E1CD0F8040039870F /* UIScreen+DSScreenSize.m */,
+				C693C41F1CD0F8040039870F /* UIView+DSCapture.h */,
+				C693C4201CD0F8040039870F /* UIView+DSCapture.m */,
+				C693C40E1CD0F6280039870F /* DSWelcomViewController.h */,
+				C693C40F1CD0F6280039870F /* DSWelcomViewController.m */,
+				C693C4211CD0F8040039870F /* DSBaseViewController.h */,
+				C693C4221CD0F8040039870F /* DSBaseViewController.m */,
+			);
+			name = DSCommon;
 			sourceTree = "<group>";
 		};
 		C9B42F3AB62DD59A2A3E7B29 /* Frameworks */ = {
@@ -218,6 +298,7 @@
 				C63533A81CC5E5BE00D5AA60 /* LaunchScreen.storyboard in Resources */,
 				C63533A51CC5E5BE00D5AA60 /* Assets.xcassets in Resources */,
 				C63533A31CC5E5BE00D5AA60 /* Main.storyboard in Resources */,
+				C693C42F1CD0FC430039870F /* InfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,8 +358,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				C63533A01CC5E5BE00D5AA60 /* ViewController.m in Sources */,
+				C693C40C1CD0F5EA0039870F /* MainViewController.m in Sources */,
+				C693C4081CD0F5130039870F /* DSRequest.m in Sources */,
 				C635339D1CC5E5BE00D5AA60 /* AppDelegate.m in Sources */,
+				C693C4291CD0F8040039870F /* UIView+DSCapture.m in Sources */,
+				C693C4281CD0F8040039870F /* UIScreen+DSScreenSize.m in Sources */,
+				C693C4251CD0F8040039870F /* NSString+DSEncrypt.m in Sources */,
+				C693C4231CD0F8040039870F /* DSDevice.m in Sources */,
+				C693C4041CD0EA020039870F /* DSNetWork.m in Sources */,
+				C693C42A1CD0F8040039870F /* DSBaseViewController.m in Sources */,
+				C693C42E1CD0FC430039870F /* InfoViewController.m in Sources */,
 				C635339A1CC5E5BE00D5AA60 /* main.m in Sources */,
+				C693C4241CD0F8040039870F /* NSString+URLString.m in Sources */,
+				C693C4101CD0F6280039870F /* DSWelcomViewController.m in Sources */,
+				C693C4271CD0F8040039870F /* UIColor+DSHexColor.m in Sources */,
+				C693C4261CD0F8040039870F /* NSString+DSPredicate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +489,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Designer",
 				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Designer/PrefixHeader.pch;
 				INFOPLIST_FILE = Designer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yellfun.Designer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,7 +509,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Designer",
 				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Designer/PrefixHeader.pch;
 				INFOPLIST_FILE = Designer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yellfun.Designer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
