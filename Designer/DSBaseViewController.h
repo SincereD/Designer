@@ -13,11 +13,15 @@
  */
 @interface DSBaseViewController : UIViewController
 
-//- (UIBarButtonItem*)rightBarButtonItem;
-//
-//- (UIBarButtonItem*)leftBarButtonItem;
-//
-//- (UITabBar*)tabBar;
+- (UIBarButtonItem*)rightBarButtonItem;
+
+- (UIBarButtonItem*)leftBarButtonItem;
+
+- (UITabBar*)tabBar;
+
+- (void)setBaseRightBarButtonItem:(UIBarButtonItem*)item;
+
+- (void)setBaseLeftBarButtonItem:(UIBarButtonItem*)item;
 
 
 @end

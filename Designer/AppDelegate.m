@@ -24,7 +24,6 @@
     [Bmob registerWithAppKey:BombAppKey];
     [MobClick startWithAppkey:MobAppKey];
     [[DSNetWork sharedNetWork] configureReachManager];
-
     return YES;
 }
 

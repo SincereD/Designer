@@ -10,7 +10,7 @@
 
 #import <AFNetworking.h>
 
-@interface DSNetWork ()<NSCopying>
+@interface DSNetWork ()<NSCopying,NSMutableCopying>
 
 @property (nonatomic,strong) AFNetworkReachabilityManager * reachManager;
 @property (nonatomic,assign) BOOL netStatus;
@@ -36,6 +36,11 @@ static DSNetWork * _netWork;
 }
 
 - (id)copyWithZone:(nullable NSZone *)zone
+{
+    return [DSNetWork sharedNetWork] ;
+}
+
+- (id)mutableCopyWithZone:(NSZone *)zone
 {
     return [DSNetWork sharedNetWork] ;
 }
