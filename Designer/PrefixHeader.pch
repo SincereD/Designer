@@ -14,5 +14,6 @@
 
 # import "DSCommon.h"
 # import <BmobSDK/Bmob.h>
+# import <UIImageView+WebCache.h>
 
 #endif /* PrefixHeader_pch */

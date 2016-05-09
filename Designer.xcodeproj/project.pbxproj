@@ -10,7 +10,6 @@
 		277FBD2DCC003E48A0A0F110 /* libPods-Designer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC12A030729C1B66ED14CC86 /* libPods-Designer.a */; };
 		C635339A1CC5E5BE00D5AA60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C63533991CC5E5BE00D5AA60 /* main.m */; };
 		C635339D1CC5E5BE00D5AA60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C635339C1CC5E5BE00D5AA60 /* AppDelegate.m */; };
-		C63533A01CC5E5BE00D5AA60 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C635339F1CC5E5BE00D5AA60 /* ViewController.m */; };
 		C63533A31CC5E5BE00D5AA60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C63533A11CC5E5BE00D5AA60 /* Main.storyboard */; };
 		C63533A51CC5E5BE00D5AA60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C63533A41CC5E5BE00D5AA60 /* Assets.xcassets */; };
 		C63533A81CC5E5BE00D5AA60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C63533A61CC5E5BE00D5AA60 /* LaunchScreen.storyboard */; };
@@ -40,6 +39,7 @@
 		C693C42E1CD0FC430039870F /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C693C42C1CD0FC430039870F /* InfoViewController.m */; };
 		C693C42F1CD0FC430039870F /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C693C42D1CD0FC430039870F /* InfoViewController.xib */; };
 		C693C4AB1CD25A7B0039870F /* DSAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C693C4AA1CD25A7B0039870F /* DSAnimation.m */; };
+		C6E3316F1CDC93FC00F00705 /* UIImage+DSImageColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E3316E1CDC93FC00F00705 /* UIImage+DSImageColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,8 +49,6 @@
 		C63533991CC5E5BE00D5AA60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C635339B1CC5E5BE00D5AA60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C635339C1CC5E5BE00D5AA60 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C635339E1CC5E5BE00D5AA60 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C635339F1CC5E5BE00D5AA60 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C63533A21CC5E5BE00D5AA60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C63533A41CC5E5BE00D5AA60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C63533A71CC5E5BE00D5AA60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,6 +95,8 @@
 		C693C42D1CD0FC430039870F /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
 		C693C4A91CD25A7B0039870F /* DSAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAnimation.h; sourceTree = "<group>"; };
 		C693C4AA1CD25A7B0039870F /* DSAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAnimation.m; sourceTree = "<group>"; };
+		C6E3316D1CDC93FC00F00705 /* UIImage+DSImageColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DSImageColor.h"; sourceTree = "<group>"; };
+		C6E3316E1CDC93FC00F00705 /* UIImage+DSImageColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DSImageColor.m"; sourceTree = "<group>"; };
 		FC12A030729C1B66ED14CC86 /* libPods-Designer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Designer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -162,8 +162,6 @@
 				C693C42B1CD0FC430039870F /* InfoViewController.h */,
 				C693C42C1CD0FC430039870F /* InfoViewController.m */,
 				C693C42D1CD0FC430039870F /* InfoViewController.xib */,
-				C635339E1CC5E5BE00D5AA60 /* ViewController.h */,
-				C635339F1CC5E5BE00D5AA60 /* ViewController.m */,
 				C693C4051CD0EDD50039870F /* PrefixHeader.pch */,
 				C63533A11CC5E5BE00D5AA60 /* Main.storyboard */,
 				C63533A41CC5E5BE00D5AA60 /* Assets.xcassets */,
@@ -203,15 +201,17 @@
 		C693C4111CD0F7F50039870F /* DSCommon */ = {
 			isa = PBXGroup;
 			children = (
+				C693C4121CD0F8030039870F /* DSCommon.h */,
 				C693C4A91CD25A7B0039870F /* DSAnimation.h */,
 				C693C4AA1CD25A7B0039870F /* DSAnimation.m */,
-				C693C4121CD0F8030039870F /* DSCommon.h */,
 				C693C4021CD0EA020039870F /* DSNetWork.h */,
 				C693C4031CD0EA020039870F /* DSNetWork.m */,
 				C693C4061CD0F5130039870F /* DSRequest.h */,
 				C693C4071CD0F5130039870F /* DSRequest.m */,
 				C693C4131CD0F8030039870F /* DSDevice.h */,
 				C693C4141CD0F8030039870F /* DSDevice.m */,
+				C6E3316D1CDC93FC00F00705 /* UIImage+DSImageColor.h */,
+				C6E3316E1CDC93FC00F00705 /* UIImage+DSImageColor.m */,
 				C693C4151CD0F8040039870F /* NSString+URLString.h */,
 				C693C4161CD0F8040039870F /* NSString+URLString.m */,
 				C693C4171CD0F8040039870F /* NSString+DSEncrypt.h */,
@@ -363,7 +363,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C693C4AB1CD25A7B0039870F /* DSAnimation.m in Sources */,
-				C63533A01CC5E5BE00D5AA60 /* ViewController.m in Sources */,
 				C693C40C1CD0F5EA0039870F /* MainViewController.m in Sources */,
 				C693C4081CD0F5130039870F /* DSRequest.m in Sources */,
 				C635339D1CC5E5BE00D5AA60 /* AppDelegate.m in Sources */,
@@ -372,6 +371,7 @@
 				C693C4251CD0F8040039870F /* NSString+DSEncrypt.m in Sources */,
 				C693C4231CD0F8040039870F /* DSDevice.m in Sources */,
 				C693C4041CD0EA020039870F /* DSNetWork.m in Sources */,
+				C6E3316F1CDC93FC00F00705 /* UIImage+DSImageColor.m in Sources */,
 				C693C42A1CD0F8040039870F /* DSBaseViewController.m in Sources */,
 				C693C42E1CD0FC430039870F /* InfoViewController.m in Sources */,
 				C635339A1CC5E5BE00D5AA60 /* main.m in Sources */,

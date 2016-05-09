@@ -19,10 +19,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Main";
+    self.title = @"Wisdom";
+
+    
     NSLog(@"%p",[DSNetWork sharedNetWork]);
     NSLog(@"%p",[[DSNetWork sharedNetWork] copy]);
     NSLog(@"%p",[[DSNetWork sharedNetWork] mutableCopy]);
+    
+    [self.navigationController.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:[UIFont fontWithName:@"Bradley Hand" size:15.0f]} forState:UIControlStateNormal];
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:[UIFont fontWithName:@"Bradley Hand" size:30.0f]}];
     
     
     BmobQuery   *bquery = [BmobQuery queryWithClassName:@"Sources"];
@@ -42,14 +48,11 @@
                 NSString *playerName = [object objectForKey:@"ImageUrl"];
                 NSLog(@"%@",playerName);
                 playerName = [NSString stringWithFormat:@"http://7xtf1s.com1.z0.glb.clouddn.com/%@",playerName];
-                NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:playerName]];
                 
-                UIImage * image = [UIImage imageWithData:data];
-                
-                UIImageView * ImageView = [[UIImageView alloc] initWithImage:image];
+                UIImageView * ImageView = [[UIImageView alloc] init];
+                [ImageView sd_setImageWithURL:[NSURL URLWithString:playerName]];
                 [ImageView setFrame:self.view.bounds];
-                [self.view addSubview:ImageView];
-            
+//                [self.view addSubview:ImageView];
                 
             }
         }
@@ -78,6 +81,7 @@
     
     UIBarButtonItem * rightItme = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     [self setBaseRightBarButtonItem:rightItme];
+
 }
 
 - (void)rightItmeAction:(id)sender
