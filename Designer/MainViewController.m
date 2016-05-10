@@ -19,17 +19,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Wisdom";
+    self.title = @"动效王国";
 
     
     NSLog(@"%p",[DSNetWork sharedNetWork]);
     NSLog(@"%p",[[DSNetWork sharedNetWork] copy]);
     NSLog(@"%p",[[DSNetWork sharedNetWork] mutableCopy]);
-    
-    [self.navigationController.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:[UIFont fontWithName:@"Bradley Hand" size:15.0f]} forState:UIControlStateNormal];
-    
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:[UIFont fontWithName:@"Bradley Hand" size:30.0f]}];
-    
     
     BmobQuery   *bquery = [BmobQuery queryWithClassName:@"Sources"];
     
@@ -64,7 +59,8 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
-    [self leftItem];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:[UIFont fontWithName:@"DFWaWaSC-W5" size:25.0f]}];
+    [self rightItem];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -72,16 +68,22 @@
     [super viewDidAppear:animated];
 }
 
-- (void)leftItem
+- (void)rightItem
 {
     UIButton * rightBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     [rightBtn setFrame: CGRectMake(0, 0, 28, 28)];
-    [rightBtn setBackgroundColor:[UIColor redColor]];
+    [rightBtn setTitle:@"I" forState:UIControlStateNormal];
     [rightBtn addTarget:self action:@selector(rightItmeAction:) forControlEvents:UIControlEventTouchUpInside];
-    
+    [rightBtn setTintColor:[UIColor blackColor]];
+    [rightBtn.titleLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:25.0f]];
     UIBarButtonItem * rightItme = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     [self setBaseRightBarButtonItem:rightItme];
-
+    
+    CAKeyframeAnimation *anima = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+    anima.values = @[@1,@1.5,@1];
+    anima.duration = 2.0f;
+    anima.repeatCount = MAXFLOAT;
+    [rightBtn.layer addAnimation:anima forKey:@"scale"];
 }
 
 - (void)rightItmeAction:(id)sender

@@ -40,6 +40,7 @@
 		C693C42F1CD0FC430039870F /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C693C42D1CD0FC430039870F /* InfoViewController.xib */; };
 		C693C4AB1CD25A7B0039870F /* DSAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C693C4AA1CD25A7B0039870F /* DSAnimation.m */; };
 		C6E3316F1CDC93FC00F00705 /* UIImage+DSImageColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E3316E1CDC93FC00F00705 /* UIImage+DSImageColor.m */; };
+		C6FC77A01CE20DFA00CD68F3 /* WawaSC.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6FC779F1CE20DFA00CD68F3 /* WawaSC.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,7 @@
 		C693C4AA1CD25A7B0039870F /* DSAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAnimation.m; sourceTree = "<group>"; };
 		C6E3316D1CDC93FC00F00705 /* UIImage+DSImageColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DSImageColor.h"; sourceTree = "<group>"; };
 		C6E3316E1CDC93FC00F00705 /* UIImage+DSImageColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DSImageColor.m"; sourceTree = "<group>"; };
+		C6FC779F1CE20DFA00CD68F3 /* WawaSC.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WawaSC.otf; sourceTree = "<group>"; };
 		FC12A030729C1B66ED14CC86 /* libPods-Designer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Designer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -175,6 +177,7 @@
 		C63533981CC5E5BE00D5AA60 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C6FC779F1CE20DFA00CD68F3 /* WawaSC.otf */,
 				C63533991CC5E5BE00D5AA60 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -303,6 +306,7 @@
 				C63533A81CC5E5BE00D5AA60 /* LaunchScreen.storyboard in Resources */,
 				C63533A51CC5E5BE00D5AA60 /* Assets.xcassets in Resources */,
 				C63533A31CC5E5BE00D5AA60 /* Main.storyboard in Resources */,
+				C6FC77A01CE20DFA00CD68F3 /* WawaSC.otf in Resources */,
 				C693C42F1CD0FC430039870F /* InfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
