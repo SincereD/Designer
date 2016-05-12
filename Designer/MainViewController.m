@@ -9,7 +9,7 @@
 #import "MainViewController.h"
 #import "InfoViewController.h"
 
-@interface MainViewController ()
+@interface MainViewController ()<UIGestureRecognizerDelegate>
 
 @end
 
@@ -19,12 +19,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"动效王国";
-
-    
-    NSLog(@"%p",[DSNetWork sharedNetWork]);
-    NSLog(@"%p",[[DSNetWork sharedNetWork] copy]);
-    NSLog(@"%p",[[DSNetWork sharedNetWork] mutableCopy]);
+     self.title = @"动效王国";
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     
     BmobQuery   *bquery = [BmobQuery queryWithClassName:@"Sources"];
     
@@ -71,25 +67,37 @@
 - (void)rightItem
 {
     UIButton * rightBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    [rightBtn setFrame: CGRectMake(0, 0, 28, 28)];
-    [rightBtn setTitle:@"I" forState:UIControlStateNormal];
+    [rightBtn setFrame: CGRectMake(0, 0, 32, 32)];
     [rightBtn addTarget:self action:@selector(rightItmeAction:) forControlEvents:UIControlEventTouchUpInside];
+    [rightBtn setBackgroundImage:[UIImage imageNamed:@"关于@2x.png"] forState:UIControlStateNormal];
     [rightBtn setTintColor:[UIColor blackColor]];
     [rightBtn.titleLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:25.0f]];
     UIBarButtonItem * rightItme = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     [self setBaseRightBarButtonItem:rightItme];
     
     CAKeyframeAnimation *anima = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
-    anima.values = @[@1,@1.5,@1];
+    anima.values = @[@1,@1.2,@1];
     anima.duration = 2.0f;
     anima.repeatCount = MAXFLOAT;
     [rightBtn.layer addAnimation:anima forKey:@"scale"];
+    
+    UIButton * leftBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    [leftBtn setFrame: CGRectMake(0, 0, 28, 28)];
+    [leftBtn setUserInteractionEnabled:NO];
+    UIBarButtonItem * leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    [self setBaseLeftBarButtonItem:leftItem];
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }
 
 - (void)rightItmeAction:(id)sender
 {
     InfoViewController * infoVC = [[InfoViewController alloc] init];
     [self.navigationController pushViewController:infoVC animated:YES];
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    return NO;
 }
 
 @end

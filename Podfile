@@ -3,4 +3,5 @@ target ‘Designer’do
 pod 'UMengAnalytics-NO-IDFA'
 pod 'Qiniu'
 pod 'SDWebImage'
+pod 'UIImageView-PlayGIF'
 end

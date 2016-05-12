@@ -7,9 +7,13 @@
 //
 
 #import "InfoViewController.h"
+#import "InfoData.h"
+#import "InfoView.h"
 
 @interface InfoViewController ()<UIGestureRecognizerDelegate,UINavigationControllerDelegate>
-
+{
+    CGFloat _height;
+}
 @end
 
 @implementation InfoViewController
@@ -18,7 +22,12 @@
 {
     [super viewDidLoad];
     [self initBackBtn];
-    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self initSences];
 }
 
 - (void)initBackBtn
@@ -50,22 +59,50 @@
 
 - (void)initSences
 {
-    
+    _height = (kScreenHeight - 64.0f)/3.0f;
+    [self copyright];
+    [self coder];
+    [self designer];
 }
 
 - (void)copyright
 {
+    InfoData * copyrightData = [[InfoData alloc] initWithPhotoName:@"copyright.png"
+                                                  mailBox:@"copyright"
+                                                  subject:@"动效之美v1.0"];
+    InfoView * copyrightView = [[InfoView alloc] initWithData:copyrightData frame:CGRectMake(-kScreenWidth, 64, kScreenWidth, _height)];
+    [self.view addSubview:copyrightView];
     
+    [UIView animateWithDuration:0.8 animations:^{
+        [copyrightView setFrame:CGRectMake(0, 64, kScreenWidth, _height)];
+    }];
 }
 
 - (void)designer
 {
-    
+    InfoData * designerData = [[InfoData alloc] initWithPhotoName:@"designer.png"
+                                                           mailBox:@"yu.yi.fan@foxmail.com"
+                                                           subject:@"设计师"];
+    InfoView * designerView = [[InfoView alloc] initWithData:designerData
+                                                       frame:CGRectMake(kScreenWidth, _height + 64, kScreenWidth, _height)];
+    [self.view addSubview:designerView];
+    [UIView animateWithDuration:0.8 animations:^{
+        [designerView setFrame:CGRectMake(0, _height + 64, kScreenWidth, _height)];
+    }];
 }
 
 - (void)coder
 {
+    InfoData * coderData = [[InfoData alloc] initWithPhotoName:@"coder"
+                                                       mailBox:@"sincere129120@icloud.com"
+                                                       subject:@"开发者"];
+    InfoView * coderView = [[InfoView alloc] initWithData:coderData
+                                                    frame:CGRectMake(-kScreenWidth, 64 + _height * 2.0f, kScreenWidth, _height)];
+    [self.view addSubview:coderView];
     
+    [UIView animateWithDuration:0.8 animations:^{
+        [coderView setFrame:CGRectMake(0, _height*2 + 64, kScreenWidth, _height)];
+    }];
 }
 
 @end
