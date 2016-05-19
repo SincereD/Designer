@@ -8,6 +8,8 @@
 
 #import "MainViewController.h"
 #import "InfoViewController.h"
+#import <UIImageView+PlayGIF.h>
+#import <AFNetworking.h>
 
 @interface MainViewController ()<UIGestureRecognizerDelegate>
 
@@ -29,26 +31,45 @@
     }];
     
     //查找GameScore表里面id为0c6db13c的数据
-    [bquery getObjectInBackgroundWithId:@"eZDoLLLV" block:^(BmobObject *object,NSError *error){
-        if (error){
-            //进行错误处理
-        }else{
-            //表里有id为0c6db13c的数据
-            if (object) {
-                //得到playerName和cheatMode
-                NSString *playerName = [object objectForKey:@"ImageUrl"];
-                NSLog(@"%@",playerName);
-                playerName = [NSString stringWithFormat:@"http://7xtf1s.com1.z0.glb.clouddn.com/%@",playerName];
-                
-                UIImageView * ImageView = [[UIImageView alloc] init];
-                [ImageView sd_setImageWithURL:[NSURL URLWithString:playerName]];
-                [ImageView setFrame:self.view.bounds];
-//                [self.view addSubview:ImageView];
-                
+    [bquery getObjectInBackgroundWithId:@"nxZp444E" block:^(BmobObject *object,NSError *error){
+        if (error)
+        {
+            
+        }else
+        {
+            if (object)
+            {
+                NSString * designerName = [object objectForKey:@"ImageUrl"];
+                NSString * urlstr = [NSString stringWithFormat:@"http://7xtf1s.com1.z0.glb.clouddn.com/%@",designerName];
+                [self downLoadWithURL:urlstr];
             }
         }
     }];
 
+}
+
+- (void)downLoadWithURL:(NSString*)url
+{
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    NSURL *URL = [NSURL URLWithString:[url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+        return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
+    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+        NSLog(@"File downloaded to: %@", filePath);
+        NSData * data = [NSData dataWithContentsOfURL:filePath];
+        UIImageView * imageView = [[UIImageView alloc] init];
+        [imageView setFrame:self.view.bounds];
+        [imageView setGifData:data];
+        [imageView startGIF];
+        [self.view addSubview:imageView];
+        
+    }];
+    [downloadTask resume];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -69,7 +90,7 @@
     UIButton * rightBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     [rightBtn setFrame: CGRectMake(0, 0, 32, 32)];
     [rightBtn addTarget:self action:@selector(rightItmeAction:) forControlEvents:UIControlEventTouchUpInside];
-    [rightBtn setBackgroundImage:[UIImage imageNamed:@"关于@2x.png"] forState:UIControlStateNormal];
+    [rightBtn setBackgroundImage:[UIImage imageNamed:@"关于@2x.jpg"] forState:UIControlStateNormal];
     [rightBtn setTintColor:[UIColor blackColor]];
     [rightBtn.titleLabel setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:25.0f]];
     UIBarButtonItem * rightItme = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];

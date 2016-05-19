@@ -61,11 +61,11 @@
 		C6FC77D31CE4895B00CD68F3 /* 按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77BC1CE4895B00CD68F3 /* 按钮.png */; };
 		C6FC77D51CE4895B00CD68F3 /* 保留 .png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77BF1CE4895B00CD68F3 /* 保留 .png */; };
 		C6FC77D61CE4895B00CD68F3 /* 修改.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77C01CE4895B00CD68F3 /* 修改.png */; };
-		C6FC77D71CE4895B00CD68F3 /* 关于@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77C11CE4895B00CD68F3 /* 关于@2x.png */; };
 		C6FC77D81CE4895B00CD68F3 /* 动效app.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77C21CE4895B00CD68F3 /* 动效app.png */; };
 		C6FC77D91CE4895B00CD68F3 /* 商用.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77C31CE4895B00CD68F3 /* 商用.png */; };
 		C6FC77DE1CE48A0100CD68F3 /* InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FC77DD1CE48A0100CD68F3 /* InfoView.m */; };
 		C6FC77E11CE48A2000CD68F3 /* InfoData.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FC77E01CE48A2000CD68F3 /* InfoData.m */; };
+		C6FF98991CED97F000D2E03A /* 关于@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C6FF98981CED97F000D2E03A /* 关于@2x.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,13 +146,13 @@
 		C6FC77BC1CE4895B00CD68F3 /* 按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "按钮.png"; sourceTree = "<group>"; };
 		C6FC77BF1CE4895B00CD68F3 /* 保留 .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "保留 .png"; sourceTree = "<group>"; };
 		C6FC77C01CE4895B00CD68F3 /* 修改.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "修改.png"; sourceTree = "<group>"; };
-		C6FC77C11CE4895B00CD68F3 /* 关于@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关于@2x.png"; sourceTree = "<group>"; };
 		C6FC77C21CE4895B00CD68F3 /* 动效app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "动效app.png"; sourceTree = "<group>"; };
 		C6FC77C31CE4895B00CD68F3 /* 商用.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "商用.png"; sourceTree = "<group>"; };
 		C6FC77DC1CE48A0100CD68F3 /* InfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoView.h; sourceTree = "<group>"; };
 		C6FC77DD1CE48A0100CD68F3 /* InfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoView.m; sourceTree = "<group>"; };
 		C6FC77DF1CE48A2000CD68F3 /* InfoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoData.h; sourceTree = "<group>"; };
 		C6FC77E01CE48A2000CD68F3 /* InfoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoData.m; sourceTree = "<group>"; };
+		C6FF98981CED97F000D2E03A /* 关于@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "关于@2x.jpg"; sourceTree = "<group>"; };
 		FC12A030729C1B66ED14CC86 /* libPods-Designer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Designer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -355,9 +355,9 @@
 			children = (
 				C6FC77BF1CE4895B00CD68F3 /* 保留 .png */,
 				C6FC77C01CE4895B00CD68F3 /* 修改.png */,
-				C6FC77C11CE4895B00CD68F3 /* 关于@2x.png */,
-				C6FC77C21CE4895B00CD68F3 /* 动效app.png */,
 				C6FC77C31CE4895B00CD68F3 /* 商用.png */,
+				C6FF98981CED97F000D2E03A /* 关于@2x.jpg */,
+				C6FC77C21CE4895B00CD68F3 /* 动效app.png */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -459,7 +459,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6FC77D71CE4895B00CD68F3 /* 关于@2x.png in Resources */,
 				C6FC77D51CE4895B00CD68F3 /* 保留 .png in Resources */,
 				C6FC77CE1CE4895B00CD68F3 /* 不知道.png in Resources */,
 				C6FC77C81CE4895B00CD68F3 /* email.png in Resources */,
@@ -478,6 +477,7 @@
 				C63533A51CC5E5BE00D5AA60 /* Assets.xcassets in Resources */,
 				C6FC77D61CE4895B00CD68F3 /* 修改.png in Resources */,
 				C6FC77D31CE4895B00CD68F3 /* 按钮.png in Resources */,
+				C6FF98991CED97F000D2E03A /* 关于@2x.jpg in Resources */,
 				C6FC77D21CE4895B00CD68F3 /* 分享图标.png in Resources */,
 				C6FC77CB1CE4895B00CD68F3 /* weibo.png in Resources */,
 				C63533A31CC5E5BE00D5AA60 /* Main.storyboard in Resources */,
@@ -686,7 +686,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Designer/PrefixHeader.pch;
 				INFOPLIST_FILE = Designer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dy.Animation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -709,7 +709,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Designer/PrefixHeader.pch;
 				INFOPLIST_FILE = Designer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dy.Animation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
