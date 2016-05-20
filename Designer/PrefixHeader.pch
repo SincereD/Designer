@@ -16,4 +16,6 @@
 # import <BmobSDK/Bmob.h>
 # import <UIImageView+WebCache.h>
 
+#define GIFScale 6.0f/8.0f  
+
 #endif /* PrefixHeader_pch */

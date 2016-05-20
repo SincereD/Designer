@@ -26,6 +26,14 @@
     [self.navigationController setNavigationBarHidden:YES];
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    [_gifImageView stopGIF];
+    [_gifImageView removeFromSuperview];
+}
+
 - (BOOL)prefersStatusBarHidden
 {
     return YES;

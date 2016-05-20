@@ -4,4 +4,5 @@ pod 'UMengAnalytics-NO-IDFA'
 pod 'Qiniu'
 pod 'SDWebImage'
 pod 'UIImageView-PlayGIF'
+pod 'YLGIFImage'
 end
