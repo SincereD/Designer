@@ -12,6 +12,7 @@
 
 - (void)startAnimationWithDelay:(CGFloat)delayTime;
 
+@property (nonatomic,assign) BOOL isSelected;
 @property (nonatomic,strong) DesignerView * designerView;
 
 @end

@@ -18,12 +18,17 @@
 
 @interface MainViewController ()<UIGestureRecognizerDelegate,UITableViewDelegate,UITableViewDataSource>
 {
+    
+    UITableView    * _table;
+
     NSMutableArray * _dataSource;
     NSMutableArray * _dataCellSource;
+
     LoadingView    * _loadingView;
-    UITableView    * _table;
     DesignerView   * _lastDesignerView;
-    NSInteger        _selection;
+    
+    NSInteger        _lastSection;
+    NSInteger        _currentSection;
 }
 @end
 
@@ -34,7 +39,8 @@
 {
     [super viewDidLoad];
      self.title = @"一起摇摆";
-    _selection = -1;
+    _currentSection = -1;
+    _lastSection = -1;
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     _dataCellSource = [NSMutableArray arrayWithCapacity:0];
@@ -211,27 +217,49 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.section == _currentSection)
+    {
+        return kScreenWidth * GIFScale + 60;
+    }
+    
     return kScreenWidth * GIFScale;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    DesignerTableViewCell *cardCell = (DesignerTableViewCell *)cell;
+    if (_currentSection == indexPath.section)
+    {
+        [cardCell.designerView showDesignerInfo];
+        return;
+    }
+    
+    if (_lastSection == indexPath.section)
+    {
+        return;
+    }
     
     static CGFloat initialDelay = 0.2f;
     static CGFloat stutter = 0.06f;
     
-    DesignerTableViewCell *cardCell = (DesignerTableViewCell *)cell;
     [cardCell startAnimationWithDelay:initialDelay + ((indexPath.section) * stutter)];
     [cardCell.designerView wordsAnimation];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    if (_currentSection == indexPath.section)
+    {
+        return;
+    }
+    _currentSection = indexPath.section;
     
-    [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-    _selection = indexPath.section;
-//    [tableView reloadSections:[NSIndexPath indexPathWithIndex:indexPath.se] withRowAnimation:UITableViewRowAnimationFade];
+    if (_lastSection != -1)
+    {
+        [tableView reloadSections:[NSIndexSet indexSetWithIndex:_lastSection] withRowAnimation:UITableViewRowAnimationFade];
+    }
+    [tableView reloadSections:[NSIndexSet indexSetWithIndex:_currentSection] withRowAnimation:UITableViewRowAnimationFade];
     
     DesignerView * design = (DesignerView*)_dataCellSource[indexPath.section];
     
@@ -250,32 +278,7 @@
         [design startShaking];
     }
     _lastDesignerView =  design;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    if (section == _selection)
-    {
-        return 60.0f;
-    }
-    else
-    {
-        return 0.0f;
-    }
-}
-
-- (UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    if (section == _selection)
-    {
-        UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 60)];
-        [view setBackgroundColor:[UIColor redColor]];
-        return view;
-    }
-    else
-    {
-        return nil;
-    }
+    _lastSection = indexPath.section;
 }
 
 @end

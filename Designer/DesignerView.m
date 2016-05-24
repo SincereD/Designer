@@ -15,12 +15,16 @@
 
 @interface DesignerView ()
 
-@property (nonatomic,strong)YLGIFImage * gifImage;
-@property (nonatomic,strong)UIImage * normalImage;
 @property (nonatomic,assign)BOOL isShaking;
+
+@property (nonatomic,strong)YLGIFImage * gifImage;
+@property (nonatomic,strong)YLImageView * gifImageView;
+
+@property (nonatomic,strong)UIImage * normalImage;
 @property (nonatomic,strong)UILabel * coprightLab;
 @property (nonatomic,strong)UILabel * nameLab;
-@property (nonatomic,strong)YLImageView * gifImageView;
+@property (nonatomic,strong)UIView * designerInfoView;
+@property (nonatomic,strong)UIButton * shareBtn;
 
 @end
 
@@ -57,6 +61,22 @@
     _bgColor = [_normalImage mostColor];
 }
 
+- (void)initDesignerInfoView
+{
+    if (!_shareBtn)
+    {
+        
+    }
+    
+    if (!_designerInfoView)
+    {
+        _designerInfoView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenWidth * GIFScale, kScreenWidth, kScreenWidth * GIFScale/4)];
+        [self addSubview:_designerInfoView];
+        
+//        UILabel * designer = [[UILabel alloc] initWithFrame:CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)]
+    }
+}
+
 - (void)exchangeShakeState
 {
     if (_isShaking)
@@ -75,6 +95,7 @@
     _isShaking = YES;
     [self sendSubviewToBack:_gifImageView];
     [self bring];
+    [self showDesignerInfo];
 }
 
 - (void)stopShaking
@@ -92,6 +113,28 @@
     [self addSubview:_gifImageView];
     [self sendSubviewToBack:_gifImageView];
     _isShaking = NO;
+    
+    [self hideDesignerInfo];
+}
+
+- (void)showDesignerInfo
+{
+    [UIView animateWithDuration:0.5f animations:^{
+        _coprightLab.alpha = 0.0f;
+        _nameLab.alpha = 0.0f;
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+- (void)hideDesignerInfo
+{
+    [UIView animateWithDuration:0.5f animations:^{
+        _coprightLab.alpha = 1.0f;
+        _nameLab.alpha = 1.0f;
+    } completion:^(BOOL finished) {
+        
+    }];
 }
 
 - (void)wordsAnimation

@@ -20,6 +20,10 @@
 
 - (void)stopShaking;
 
+- (void)showDesignerInfo;
+
+- (void)hideDesignerInfo;
+
 - (void)wordsAnimation;
 
 @property (nonatomic,strong)DesignerData * data;
