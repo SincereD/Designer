@@ -18,5 +18,6 @@
 #import "NSString+DSPredicate.h"
 #import "NSString+URLString.h"
 #import "DSNetWork.h"
+#import "UIImage+DSImageColor.h"
 
 #endif /* DSCommon_h */

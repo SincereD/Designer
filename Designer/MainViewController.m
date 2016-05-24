@@ -23,6 +23,7 @@
     LoadingView    * _loadingView;
     UITableView    * _table;
     DesignerView   * _lastDesignerView;
+    NSInteger        _selection;
 }
 @end
 
@@ -33,6 +34,7 @@
 {
     [super viewDidLoad];
      self.title = @"一起摇摆";
+    _selection = -1;
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     _dataCellSource = [NSMutableArray arrayWithCapacity:0];
@@ -159,9 +161,9 @@
 
 - (void)initTable
 {
+    [_loadingView removeLoadingView];
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [_loadingView removeLoadingView];
-        
         if (!_table)
         {
             _table = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64.0f) style:UITableViewStylePlain];
@@ -176,17 +178,22 @@
     
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return _dataCellSource.count;
+    return _dataSource.count;
 }
 
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"DesignerTableViewCell"];
+    return 1;
+}
+
+- (DesignerTableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DesignerTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"DesignerTableViewCell"];
     if (!cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DesignerTableViewCell"];
+        cell = [[DesignerTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DesignerTableViewCell"];
     }else
     {
         for (UIView* view in [cell subviews])
@@ -195,7 +202,9 @@
         }
     }
     
-    DesignerView * designerView = _dataCellSource[indexPath.row];
+    DesignerView * designerView = _dataCellSource[indexPath.section];
+    [cell setDesignerView:designerView];
+    [cell setBackgroundColor:designerView.bgColor];
     [cell addSubview:designerView];
     return cell;
 }
@@ -205,11 +214,26 @@
     return kScreenWidth * GIFScale;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    static CGFloat initialDelay = 0.2f;
+    static CGFloat stutter = 0.06f;
+    
+    DesignerTableViewCell *cardCell = (DesignerTableViewCell *)cell;
+    [cardCell startAnimationWithDelay:initialDelay + ((indexPath.section) * stutter)];
+    [cardCell.designerView wordsAnimation];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    DesignerView * design = (DesignerView*)_dataCellSource[indexPath.row];
+    [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    _selection = indexPath.section;
+//    [tableView reloadSections:[NSIndexPath indexPathWithIndex:indexPath.se] withRowAnimation:UITableViewRowAnimationFade];
+    
+    DesignerView * design = (DesignerView*)_dataCellSource[indexPath.section];
     
     if (!_lastDesignerView)
     {
@@ -226,6 +250,32 @@
         [design startShaking];
     }
     _lastDesignerView =  design;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    if (section == _selection)
+    {
+        return 60.0f;
+    }
+    else
+    {
+        return 0.0f;
+    }
+}
+
+- (UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    if (section == _selection)
+    {
+        UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 60)];
+        [view setBackgroundColor:[UIColor redColor]];
+        return view;
+    }
+    else
+    {
+        return nil;
+    }
 }
 
 @end

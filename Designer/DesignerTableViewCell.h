@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DesignerData.h"
+#import "DesignerView.h"
 @interface DesignerTableViewCell : UITableViewCell
 
-@property (nonatomic,strong)DesignerData * data;
-@property (weak, nonatomic) IBOutlet UILabel *coprightLab;
-@property (weak, nonatomic) IBOutlet UILabel *nameLab;
-@property (nonatomic,strong)UIImageView * gifImageView;
+- (void)startAnimationWithDelay:(CGFloat)delayTime;
+
+@property (nonatomic,strong) DesignerView * designerView;
 
 @end

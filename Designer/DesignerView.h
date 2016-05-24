@@ -20,6 +20,9 @@
 
 - (void)stopShaking;
 
+- (void)wordsAnimation;
+
 @property (nonatomic,strong)DesignerData * data;
+@property (nonatomic,strong)UIColor * bgColor;
 
 @end

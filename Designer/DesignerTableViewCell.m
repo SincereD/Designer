@@ -10,9 +10,9 @@
 #import <UIImageView+PlayGIF.h>
 
 @interface DesignerTableViewCell ()
-{
-    UIImageView * _gifImageView;
-}
+
+@property (nonatomic,assign) BOOL aniamted;
+
 @end
 
 @implementation DesignerTableViewCell
@@ -21,37 +21,30 @@
     [super awakeFromNib];
 }
 
-- (void)setData:(DesignerData *)data
-{
-    _data = data;
-    [self initSences];
-}
 
 - (void)initSences
 {
-    [_coprightLab setText:@"版权:"];
-    [_coprightLab setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:16.0f]];
-    [_coprightLab setTextColor:[UIColor whiteColor]];
-    [_coprightLab setFrame:CGRectMake(0, self.frame.size.height-20, _coprightLab.text.length*16, 20)];
-    
-    [_nameLab setText:[NSString stringWithFormat:@"原作者:%@",_data.designerName]];
-    [_nameLab setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:16.0f]];
-    [_nameLab setTextColor:[UIColor whiteColor]];
-    [_nameLab setFrame:CGRectMake(self.frame.size.width - _nameLab.text.length*16, self.frame.size.height-20, _nameLab.text.length*16, 20)];
-    
-    NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
-    NSURL* fileURL = [documentsDirectoryURL URLByAppendingPathComponent:_data.designerName];
-    
-    _gifImageView = [[UIImageView alloc] init];
-    [_gifImageView setGifData:[NSData dataWithContentsOfURL:fileURL]];
-    [_gifImageView setFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight*GIFScale)];
-    [_gifImageView setUserInteractionEnabled:YES];
-    [self addSubview:_gifImageView];
     
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+}
+
+- (void)startAnimationWithDelay:(CGFloat)delayTime
+{
+    if (!_aniamted)
+    {
+        _designerView.transform =  CGAffineTransformMakeTranslation(-kScreenWidth, 0);
+    }
+    else
+    {
+        _designerView.transform =  CGAffineTransformMakeTranslation(kScreenWidth, 0);
+    }
+    _aniamted = !_aniamted;
+    [UIView animateWithDuration:1.0f delay:delayTime usingSpringWithDamping:0.6 initialSpringVelocity:0 options:0 animations:^{
+        _designerView.transform = CGAffineTransformIdentity;
+    } completion:NULL];
 }
 
 @end

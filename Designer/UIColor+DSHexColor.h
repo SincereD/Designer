@@ -31,4 +31,22 @@
  */
 - (UIColor*)colorWithHexString:(NSString*)hexString alpha:(CGFloat)alpha;
 
+/**
+ *  获取颜色的透明度
+ *
+ *  @param color UIColor
+ *
+ *  @return Alpha
+ */
+- (CGFloat)alphaForColor;
+
+/**
+ *  判断颜色的深浅度
+ *
+ *  @param newColor UIColor
+ *
+ *  @return YES->深色 NO->浅色
+ */
+- (BOOL)isDarkColor;
+
 @end

@@ -52,23 +52,9 @@
     _normalImage= [_gifImage getFrameWithIndex:0];
     [_gifImageView setImage:_normalImage];
     [self addSubview:_gifImageView];
+    [self sendSubviewToBack:_gifImageView];
     _isShaking = NO;
-    
-    _coprightLab = [[UILabel alloc] init];
-    [_coprightLab setText:@"版权:"];
-    [_coprightLab setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:16.0f]];
-    [_coprightLab setTextColor:[UIColor whiteColor]];
-    [_coprightLab setFrame:CGRectMake(0, self.frame.size.height-30, _coprightLab.text.length*16, 25)];
-    [self addSubview:_coprightLab];
-    
-    _nameLab = [[UILabel alloc] init];
-    [_nameLab setText:[NSString stringWithFormat:@"原作者:%@",_data.designerName]];
-    [_nameLab setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:16.0f]];
-    [_nameLab setTextColor:[UIColor whiteColor]];
-    [_nameLab setFrame:CGRectMake(self.frame.size.width - 200, self.frame.size.height-30, _nameLab.text.length*16, 25)];
-    [self addSubview:_nameLab];
-    
-    [self bring];
+    _bgColor = [_normalImage mostColor];
 }
 
 - (void)exchangeShakeState
@@ -87,6 +73,7 @@
 {
     [_gifImageView setImage:_gifImage];
     _isShaking = YES;
+    [self sendSubviewToBack:_gifImageView];
     [self bring];
 }
 
@@ -103,8 +90,46 @@
     _normalImage= [_gifImage getFrameWithIndex:0];
     [_gifImageView setImage:_normalImage];
     [self addSubview:_gifImageView];
+    [self sendSubviewToBack:_gifImageView];
     _isShaking = NO;
+}
+
+- (void)wordsAnimation
+{
+    if (!_coprightLab)
+    {
+        UIColor * textColor;
+        if ([_bgColor isDarkColor])
+        {
+            textColor = [UIColor whiteColor];
+        }
+        else
+        {
+            textColor = [UIColor blackColor];
+        }
+        _coprightLab = [[UILabel alloc] init];
+        [_coprightLab setText:@"版权:"];
+        [_coprightLab setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:16.0f]];
+        [_coprightLab setTextColor:textColor];
+        [_coprightLab setFrame:CGRectMake(0, self.frame.size.height-30, _coprightLab.text.length*16, 25)];
+        [self addSubview:_coprightLab];
+        
+        _nameLab = [[UILabel alloc] init];
+        [_nameLab setText:[NSString stringWithFormat:@"原作者:%@",_data.designerName]];
+        [_nameLab setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:16.0f]];
+        [_nameLab setTextColor:textColor];
+        [_nameLab setFrame:CGRectMake(self.frame.size.width - 200, self.frame.size.height-30, _nameLab.text.length*16, 25)];
+        [self addSubview:_nameLab];
+    }
     [self bring];
+    
+    _coprightLab.alpha = 0.0f;
+    _nameLab.alpha = 0.0f;
+    [UIView animateWithDuration:0.5 animations:^{
+        _coprightLab.alpha = 1.0f;
+        _nameLab.alpha = 1.0f;
+    }];
+    
 }
 
 - (void)bring

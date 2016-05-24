@@ -28,6 +28,7 @@
     NSString * fileName = [sepratedPath lastObject];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString * documentsPath = [paths firstObject];
+    
     _filePath = [documentsPath stringByAppendingString:[fileName stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     _designerName = [fileName stringByReplacingOccurrencesOfString:@".gif" withString:@""];
     _designerName = [_designerName stringByReplacingOccurrencesOfString:@"_" withString:@""];

@@ -23,6 +23,7 @@
     if (self = [super init])
     {
         [self setFrame:[UIScreen mainScreen].bounds];
+        [self setClipsToBounds:YES];
         [self baseView];
         [self gifView];
     }
@@ -47,26 +48,27 @@
 
 - (void)showOnView:(UIView*)baseView
 {
-    [_gifImageView setFrame:CGRectMake(0, 0, 0, 0)];
-    _gifImageView.center = _baseView.center;
-
+    [_gifImageView setFrame:CGRectMake(0, 0, kScreenWidth, kScreenWidth * 6 / 8)];
+    _gifImageView.center = CGPointMake(-kScreenWidth/2.0f, kScreenHeight/2.0f);
     [baseView addSubview:self];
-    
-    [UIView animateWithDuration:0.5f animations:^{
-        [_gifImageView setFrame:CGRectMake(0, 0, kScreenWidth, kScreenWidth * 6 / 8)];
+    [_gifImageView startGIF];
+
+    [UIView animateKeyframesWithDuration:1.5f delay:0 options:UIViewKeyframeAnimationOptionCalculationModePaced animations:^{
         _gifImageView.center = _baseView.center;
-        [_gifImageView startGIF];
     } completion:^(BOOL finished) {
-        
+
     }];
 }
 
 - (void)removeLoadingView
 {
-    [UIView animateKeyframesWithDuration:1.0f delay:1.0f options:UIViewKeyframeAnimationOptionCalculationModePaced animations:^{
-        self.transform = CGAffineTransformScale(self.transform, 0, 0);
+    [UIView animateKeyframesWithDuration:1.5f delay:0 options:UIViewKeyframeAnimationOptionCalculationModePaced animations:^{
+        self.transform = CGAffineTransformMakeTranslation(kScreenWidth, 0);
     } completion:^(BOOL finished) {
-        [self removeFromSuperview];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self removeFromSuperview];
+        });
     }];
 }
 
