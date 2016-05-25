@@ -176,6 +176,7 @@
             [_table setDelegate:self];
             [_table setDataSource:self];
             [_table setSeparatorColor:[UIColor clearColor]];
+            [_table setSectionIndexColor:[UIColor clearColor]];
             [_table setShowsVerticalScrollIndicator:NO];
             [_table setShowsHorizontalScrollIndicator:NO];
             [self.view addSubview:_table];
@@ -228,6 +229,7 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DesignerTableViewCell *cardCell = (DesignerTableViewCell *)cell;
+    [cardCell setSelectionStyle:UITableViewCellSelectionStyleNone];
     if (_currentSection == indexPath.section)
     {
         [cardCell.designerView showDesignerInfo];

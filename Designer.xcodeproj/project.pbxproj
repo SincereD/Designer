@@ -58,7 +58,6 @@
 		C6FC77D01CE4895B00CD68F3 /* 保留.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77B91CE4895B00CD68F3 /* 保留.png */; };
 		C6FC77D11CE4895B00CD68F3 /* 关闭分享.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77BA1CE4895B00CD68F3 /* 关闭分享.png */; };
 		C6FC77D21CE4895B00CD68F3 /* 分享图标.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77BB1CE4895B00CD68F3 /* 分享图标.png */; };
-		C6FC77D31CE4895B00CD68F3 /* 按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77BC1CE4895B00CD68F3 /* 按钮.png */; };
 		C6FC77D51CE4895B00CD68F3 /* 保留.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77BF1CE4895B00CD68F3 /* 保留.png */; };
 		C6FC77D61CE4895B00CD68F3 /* 修改.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77C01CE4895B00CD68F3 /* 修改.png */; };
 		C6FC77D81CE4895B00CD68F3 /* 动效app.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77C21CE4895B00CD68F3 /* 动效app.png */; };
@@ -148,7 +147,6 @@
 		C6FC77B91CE4895B00CD68F3 /* 保留.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "保留.png"; sourceTree = "<group>"; };
 		C6FC77BA1CE4895B00CD68F3 /* 关闭分享.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关闭分享.png"; sourceTree = "<group>"; };
 		C6FC77BB1CE4895B00CD68F3 /* 分享图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "分享图标.png"; sourceTree = "<group>"; };
-		C6FC77BC1CE4895B00CD68F3 /* 按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "按钮.png"; sourceTree = "<group>"; };
 		C6FC77BF1CE4895B00CD68F3 /* 保留.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "保留.png"; sourceTree = "<group>"; };
 		C6FC77C01CE4895B00CD68F3 /* 修改.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "修改.png"; sourceTree = "<group>"; };
 		C6FC77C21CE4895B00CD68F3 /* 动效app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "动效app.png"; sourceTree = "<group>"; };
@@ -362,7 +360,6 @@
 				C6FC77B91CE4895B00CD68F3 /* 保留.png */,
 				C6FC77BA1CE4895B00CD68F3 /* 关闭分享.png */,
 				C6FC77BB1CE4895B00CD68F3 /* 分享图标.png */,
-				C6FC77BC1CE4895B00CD68F3 /* 按钮.png */,
 			);
 			path = "分享页面";
 			sourceTree = "<group>";
@@ -515,7 +512,6 @@
 				C6FC77C61CE4895B00CD68F3 /* coder.png in Resources */,
 				C63533A51CC5E5BE00D5AA60 /* Assets.xcassets in Resources */,
 				C6FC77D61CE4895B00CD68F3 /* 修改.png in Resources */,
-				C6FC77D31CE4895B00CD68F3 /* 按钮.png in Resources */,
 				C6FC77D21CE4895B00CD68F3 /* 分享图标.png in Resources */,
 				C6FC77CB1CE4895B00CD68F3 /* weibo.png in Resources */,
 				C63533A31CC5E5BE00D5AA60 /* Main.storyboard in Resources */,

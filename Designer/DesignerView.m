@@ -63,18 +63,39 @@
 
 - (void)initDesignerInfoView
 {
-    if (!_shareBtn)
-    {
-        
-    }
-    
     if (!_designerInfoView)
     {
         _designerInfoView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenWidth * GIFScale, kScreenWidth, kScreenWidth * GIFScale/4)];
-        [self addSubview:_designerInfoView];
+        [_designerInfoView setBackgroundColor:_bgColor];
         
-//        UILabel * designer = [[UILabel alloc] initWithFrame:CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)]
+        UILabel * userRightLab = [[UILabel alloc] initWithFrame:CGRectMake(0, kScreenWidth * GIFScale, kScreenWidth, kScreenWidth*GIFScale/8)];
+        
     }
+    
+    if (!_shareBtn)
+    {
+        _shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_shareBtn setFrame:CGRectMake(kScreenWidth - 60, kScreenWidth * GIFScale - 20, 40, 40)];
+        [_shareBtn setImage:[UIImage imageNamed:@"分享图标.png"] forState:UIControlStateNormal];
+        [_shareBtn setImage:[UIImage imageNamed:@"关闭分享.png"] forState:UIControlStateSelected];
+        [_shareBtn setImageEdgeInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
+        [_shareBtn.layer setCornerRadius:20.0f];
+        [_shareBtn.layer setMasksToBounds:YES];
+        [_shareBtn setBackgroundColor:[UIColor orangeColor]];
+        [_shareBtn addTarget:self action:@selector(shareAction:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    [self addSubview:_designerInfoView];
+    [self addSubview:_shareBtn];
+}
+
+- (void)shareAction:(UIButton*)sender
+{
+    sender.selected = !sender.selected;
+    [UIView animateWithDuration:0.8f animations:^{
+        sender.transform = CGAffineTransformRotate(sender.transform, M_PI);
+    } completion:^(BOOL finished) {
+    }];
 }
 
 - (void)exchangeShakeState
@@ -114,6 +135,8 @@
     [self sendSubviewToBack:_gifImageView];
     _isShaking = NO;
     
+    [_shareBtn removeFromSuperview];
+    [_designerInfoView removeFromSuperview];
     [self hideDesignerInfo];
 }
 
@@ -123,7 +146,7 @@
         _coprightLab.alpha = 0.0f;
         _nameLab.alpha = 0.0f;
     } completion:^(BOOL finished) {
-        
+        [self initDesignerInfoView];
     }];
 }
 
