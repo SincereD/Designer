@@ -73,9 +73,7 @@
 
 - (void)copyright
 {
-    InfoData * copyrightData = [[InfoData alloc] initWithPhotoName:@"copyright.png"
-                                                  mailBox:@"All Resources Generated From Internet"
-                                                  subject:@"摇摆v1.0"];
+    InfoData * copyrightData = [[InfoData alloc]initWithPhotoName:@"copyright.png" mailBox:nil subject:@"动效王国v1.0"];
     copyrightView = [[InfoView alloc] initWithData:copyrightData frame:CGRectMake(-kScreenWidth, 64, kScreenWidth, _height)];
     [self.view addSubview:copyrightView];
     

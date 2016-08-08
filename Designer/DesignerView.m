@@ -68,8 +68,10 @@
         _designerInfoView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenWidth * GIFScale, kScreenWidth, kScreenWidth * GIFScale/4)];
         [_designerInfoView setBackgroundColor:_bgColor];
         
-        UILabel * userRightLab = [[UILabel alloc] initWithFrame:CGRectMake(0, kScreenWidth * GIFScale, kScreenWidth, kScreenWidth*GIFScale/8)];
-        
+        UILabel * userRightLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 60)];
+        [userRightLab setText:@"111111111"];
+        [userRightLab setTextColor:[UIColor whiteColor]];
+        [_designerInfoView addSubview:userRightLab];
     }
     
     if (!_shareBtn)
