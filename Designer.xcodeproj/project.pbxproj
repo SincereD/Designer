@@ -55,7 +55,6 @@
 		C6FC77CD1CE4895B00CD68F3 /* 分享背景.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77B51CE4895B00CD68F3 /* 分享背景.png */; };
 		C6FC77CE1CE4895B00CD68F3 /* 不知道.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77B71CE4895B00CD68F3 /* 不知道.png */; };
 		C6FC77CF1CE4895B00CD68F3 /* 二级页面和分享.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77B81CE4895B00CD68F3 /* 二级页面和分享.png */; };
-		C6FC77D01CE4895B00CD68F3 /* 保留.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77B91CE4895B00CD68F3 /* 保留.png */; };
 		C6FC77D11CE4895B00CD68F3 /* 关闭分享.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77BA1CE4895B00CD68F3 /* 关闭分享.png */; };
 		C6FC77D21CE4895B00CD68F3 /* 分享图标.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77BB1CE4895B00CD68F3 /* 分享图标.png */; };
 		C6FC77D51CE4895B00CD68F3 /* 保留.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FC77BF1CE4895B00CD68F3 /* 保留.png */; };
@@ -144,7 +143,6 @@
 		C6FC77B51CE4895B00CD68F3 /* 分享背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "分享背景.png"; sourceTree = "<group>"; };
 		C6FC77B71CE4895B00CD68F3 /* 不知道.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "不知道.png"; sourceTree = "<group>"; };
 		C6FC77B81CE4895B00CD68F3 /* 二级页面和分享.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级页面和分享.png"; sourceTree = "<group>"; };
-		C6FC77B91CE4895B00CD68F3 /* 保留.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "保留.png"; sourceTree = "<group>"; };
 		C6FC77BA1CE4895B00CD68F3 /* 关闭分享.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关闭分享.png"; sourceTree = "<group>"; };
 		C6FC77BB1CE4895B00CD68F3 /* 分享图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "分享图标.png"; sourceTree = "<group>"; };
 		C6FC77BF1CE4895B00CD68F3 /* 保留.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "保留.png"; sourceTree = "<group>"; };
@@ -357,7 +355,6 @@
 			children = (
 				C6FC77B71CE4895B00CD68F3 /* 不知道.png */,
 				C6FC77B81CE4895B00CD68F3 /* 二级页面和分享.png */,
-				C6FC77B91CE4895B00CD68F3 /* 保留.png */,
 				C6FC77BA1CE4895B00CD68F3 /* 关闭分享.png */,
 				C6FC77BB1CE4895B00CD68F3 /* 分享图标.png */,
 			);
@@ -461,7 +458,7 @@
 		C635338D1CC5E5BE00D5AA60 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Sincere;
 				TargetAttributes = {
 					C63533941CC5E5BE00D5AA60 = {
@@ -508,7 +505,6 @@
 				C63533A81CC5E5BE00D5AA60 /* LaunchScreen.storyboard in Resources */,
 				C6FC77CD1CE4895B00CD68F3 /* 分享背景.png in Resources */,
 				C6FF98B11CEEB68B00D2E03A /* DesignerTableViewCell.xib in Resources */,
-				C6FC77D01CE4895B00CD68F3 /* 保留.png in Resources */,
 				C6FC77C61CE4895B00CD68F3 /* coder.png in Resources */,
 				C63533A51CC5E5BE00D5AA60 /* Assets.xcassets in Resources */,
 				C6FC77D61CE4895B00CD68F3 /* 修改.png in Resources */,
@@ -641,8 +637,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -664,7 +662,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -685,8 +683,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -702,7 +702,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
