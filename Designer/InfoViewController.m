@@ -86,7 +86,7 @@
 {
     InfoData * designerData = [[InfoData alloc] initWithPhotoName:@"designer.png"
                                                            mailBox:@"yu.yi.fan@foxmail.com"
-                                                           subject:@"抠图师"];
+                                                           subject:@"射击师"];
     designerView = [[InfoView alloc] initWithData:designerData
                                                        frame:CGRectMake(kScreenWidth, _height + 64, kScreenWidth, _height)];
     [self.view addSubview:designerView];
