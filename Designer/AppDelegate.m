@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import <BmobSDK/Bmob.h>
-#import <MobClick.h>
+#import <UMSocialCore/UMSocialCore.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +18,7 @@
 
 #define BombAppKey @"6cd4eb4177a9c555fd390704c67e5e2d"
 #define MobAppKey  @"571f6d0ce0f55a8343002562"
+#define UMAppKey   @"583b9eb95312dd08c6000995"
 
 //微信
 //ID  wx2d31830279beb91d
@@ -26,8 +27,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [Bmob registerWithAppKey:BombAppKey];
-    [MobClick startWithAppkey:MobAppKey];
+    
+    [[UMSocialManager defaultManager] openLog:YES];
+    [[UMSocialManager defaultManager] setUmSocialAppkey:UMAppKey];
     [[DSNetWork sharedNetWork] configureReachManager];
+    
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wx2d31830279beb91d" appSecret:@"79546a6cc6c8ebc89ed4ef324af98451" redirectURL:@"http://mobile.umeng.com/social"];
+
     return YES;
 }
 

@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UMengUShare.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>YLGIFImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -41,6 +46,47 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>0C6A27AD50730FCC974FC166F4098D58</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>53B2B897D64E4516E75AC86348B86622</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5BB960E8E4B0BAE2D69E6A32639576C3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>80EAB025DB7B8ACC8B4B5867959140F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A88671933FA1706ED57594EDA4FABEA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E033EDB5EC0819481B0546434FA577B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B32669A2556E054A38318D44DF200B87</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B5FD380CA757431A7D53F5059681BFD0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>

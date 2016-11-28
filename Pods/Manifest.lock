@@ -22,16 +22,21 @@ PODS:
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
   - UIImageView-PlayGIF (1.0.5)
-  - UMengAnalytics-NO-IDFA (4.1.5)
-  - UMengSocial (5.0)
+  - UMengUShare/Core (6.0.3):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.0.3)
+  - UMengUShare/Social/WeChat (6.0.3):
+    - UMengUShare/Core
+  - UMengUShare/UI (6.0.3):
+    - UMengUShare/Core
   - YLGIFImage (0.11)
 
 DEPENDENCIES:
   - Qiniu
   - SDWebImage
   - UIImageView-PlayGIF
-  - UMengAnalytics-NO-IDFA
-  - UMengSocial
+  - UMengUShare/Social/WeChat
+  - UMengUShare/UI
   - YLGIFImage
 
 SPEC CHECKSUMS:
@@ -40,10 +45,9 @@ SPEC CHECKSUMS:
   Qiniu: a4c962782035ee25b9da3e195181d8c384bb75be
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   UIImageView-PlayGIF: 445c8b31b3a43271dd3d565d9c0c612fa59ae830
-  UMengAnalytics-NO-IDFA: f1b08b540eba6ebad044a574cae6d988cf40cfda
-  UMengSocial: 48b67179c492a8cf7803fbb0438b8f55432e2fc1
+  UMengUShare: f231fc086d789d4e560a5090dcc13a2db15c686d
   YLGIFImage: c0ae132fe80e5282b2762a97d14e23ba71a748ae
 
-PODFILE CHECKSUM: 1994759e7a129c76cc28bd2f7ff1873cd9c06cda
+PODFILE CHECKSUM: d5c02cebd76540c0ead56ca19ad396512c8d7806
 
 COCOAPODS: 1.1.1

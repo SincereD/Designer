@@ -13,6 +13,8 @@
 #import <YLGIFImage.h>
 #import <UIImageView+PlayGIF.h>
 
+#import <UMSocialCore/UMSocialCore.h>
+
 @interface DesignerView ()
 
 @property (nonatomic,assign)BOOL isShaking;
@@ -68,9 +70,16 @@
         _designerInfoView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenWidth * GIFScale, kScreenWidth, kScreenWidth * GIFScale/4)];
         [_designerInfoView setBackgroundColor:_bgColor];
         
+        UIColor * textColor;
+        if ([_bgColor isDarkColor]) {
+            textColor =  [UIColor whiteColor];
+        }else{
+            textColor =  [UIColor blackColor];
+        }
+        
         UILabel * userRightLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 60)];
-        [userRightLab setText:@"111111111"];
-        [userRightLab setTextColor:[UIColor whiteColor]];
+        [userRightLab setText:_data.designerName];
+        [userRightLab setTextColor:textColor];
         [_designerInfoView addSubview:userRightLab];
     }
     
@@ -94,9 +103,28 @@
 - (void)shareAction:(UIButton*)sender
 {
     sender.selected = !sender.selected;
+    
     [UIView animateWithDuration:0.8f animations:^{
         sender.transform = CGAffineTransformRotate(sender.transform, M_PI);
     } completion:^(BOOL finished) {
+        NSLog(@"%@",self.data.serverURL);
+        
+        UMShareEmotionObject * obj = [UMShareEmotionObject shareObjectWithTitle:@"哈哈" descr:@"哈哈" thumImage:_normalImage];
+        [obj setEmotionData:[NSData dataWithContentsOfURL:_data.fileURL]];
+        
+        //创建分享消息对象
+        UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObjectWithMediaObject:obj];
+        
+        //调用分享接口
+        [[UMSocialManager defaultManager] shareToPlatform:UMSocialPlatformType_WechatSession messageObject:messageObject currentViewController:self.keyVC completion:^(id data, NSError *error) {
+            
+            if (error) {
+                NSLog(@"************Share fail with error %@*********",error);
+            }else{
+                NSLog(@"response data is %@",data);
+            }
+        }];
+        
     }];
 }
 
@@ -160,44 +188,6 @@
     } completion:^(BOOL finished) {
         
     }];
-}
-
-- (void)wordsAnimation
-{
-    if (!_coprightLab)
-    {
-        UIColor * textColor;
-        if ([_bgColor isDarkColor])
-        {
-            textColor = [UIColor whiteColor];
-        }
-        else
-        {
-            textColor = [UIColor blackColor];
-        }
-        _coprightLab = [[UILabel alloc] init];
-        [_coprightLab setText:@"版权:"];
-        [_coprightLab setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:16.0f]];
-        [_coprightLab setTextColor:textColor];
-        [_coprightLab setFrame:CGRectMake(0, self.frame.size.height-30, _coprightLab.text.length*16, 25)];
-        [self addSubview:_coprightLab];
-        
-        _nameLab = [[UILabel alloc] init];
-        [_nameLab setText:[NSString stringWithFormat:@"原作者:%@",_data.designerName]];
-        [_nameLab setFont:[UIFont fontWithName:@"DFWaWaSC-W5" size:16.0f]];
-        [_nameLab setTextColor:textColor];
-        [_nameLab setFrame:CGRectMake(self.frame.size.width - 200, self.frame.size.height-30, _nameLab.text.length*16, 25)];
-        [self addSubview:_nameLab];
-    }
-    [self bring];
-    
-    _coprightLab.alpha = 0.0f;
-    _nameLab.alpha = 0.0f;
-    [UIView animateWithDuration:0.5 animations:^{
-        _coprightLab.alpha = 1.0f;
-        _nameLab.alpha = 1.0f;
-    }];
-    
 }
 
 - (void)bring

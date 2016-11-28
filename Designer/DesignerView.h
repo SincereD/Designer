@@ -24,9 +24,8 @@
 
 - (void)hideDesignerInfo;
 
-- (void)wordsAnimation;
-
 @property (nonatomic,strong)DesignerData * data;
 @property (nonatomic,strong)UIColor * bgColor;
+@property (nonatomic,weak)UIViewController * keyVC;
 
 @end

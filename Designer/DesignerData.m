@@ -33,6 +33,8 @@
     _designerName = [fileName stringByReplacingOccurrencesOfString:@".gif" withString:@""];
     _designerName = [_designerName stringByReplacingOccurrencesOfString:@"_" withString:@""];
    _designerName = [_designerName stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    _serverURL = [NSString stringWithFormat:@"http://7xtf1s.com1.z0.glb.clouddn.com/%@",fileName];
 }
 
 @end

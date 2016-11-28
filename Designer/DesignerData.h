@@ -14,6 +14,7 @@
 
 @property (nonatomic,strong) NSData * gifData;
 @property (nonatomic,copy)   NSString * designerName;
+@property (nonatomic,copy)   NSString * serverURL;
 @property (nonatomic,retain) NSURL * fileURL;
 @property (nonatomic,copy)   NSString * filePath;
 @property (nonatomic,assign) BOOL canSave;

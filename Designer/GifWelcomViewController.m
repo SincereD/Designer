@@ -14,6 +14,8 @@
 #import <UIImageView+PlayGIF.h>
 #import <YFGIFImageView.h>
 
+#import <AFNetworkReachabilityManager.h>
+
 
 @interface GifWelcomViewController ()
 {
@@ -38,6 +40,8 @@
     [self.navigationController setNavigationBarHidden:YES];
     
 //    [self startAniamtion];
+    
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
 }
 
 - (BOOL)prefersStatusBarHidden
@@ -182,25 +186,20 @@
 - (void)pushToMain
 {
     
-    MainViewController * main = [[MainViewController alloc] init];
-    
-    [self.navigationController pushViewController:main animated:YES];
-    
 //    DSBreakIntoViewController * breakVC = [[DSBreakIntoViewController alloc] init];
-//    [self.navigationController pushViewController:breakVC animated:YES];
+//    [self.navigationController pushViewController:breakVC animated:NO];
+//    
+//    return;
     
-    return;
-    
-    if (/* DISABLES CODE */ (0)) {
+    if (![AFNetworkReachabilityManager sharedManager].isReachableViaWiFi) {
         MainViewController * main = [[MainViewController alloc] init];
        
-        [self.navigationController pushViewController:main animated:YES];
+        [self.navigationController pushViewController:main animated:NO];
         
     }else{
         
-        MainViewController * main = [[MainViewController alloc] init];
-       
-        [self.navigationController pushViewController:main animated:YES];
+        DSBreakIntoViewController * breakVC = [[DSBreakIntoViewController alloc] init];
+        [self.navigationController pushViewController:breakVC animated:NO];
     }
     
 }

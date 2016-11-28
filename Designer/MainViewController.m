@@ -212,6 +212,7 @@
     }
     
     DesignerView * designerView = _dataCellSource[indexPath.section];
+    [designerView setKeyVC:self];
     [cell setDesignerView:designerView];
     [cell setBackgroundColor:designerView.bgColor];
     [cell addSubview:designerView];
@@ -247,7 +248,6 @@
     static CGFloat stutter = 0.06f;
     
     [cardCell startAnimationWithDelay:initialDelay + ((indexPath.section) * stutter)];
-    [cardCell.designerView wordsAnimation];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
