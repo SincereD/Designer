@@ -9,9 +9,9 @@
 #ifndef DSCommon_h
 #define DSCommon_h
 
+#import "UIColor+DSHexColor.h"
 #import "DSBaseViewController.h"
 
-#import "UIColor+DSHexColor.h"
 #import "UIView+DSCapture.h"
 #import "UIScreen+DSScreenSize.h"
 #import "NSString+DSEncrypt.h"
@@ -19,5 +19,6 @@
 #import "NSString+URLString.h"
 #import "DSNetWork.h"
 #import "UIImage+DSImageColor.h"
+#import "NSMutableArray+DSSort.h"
 
 #endif /* DSCommon_h */

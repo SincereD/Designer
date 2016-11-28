@@ -48,16 +48,18 @@
     
     [_loadingView showOnView:self.view];
     
-    BmobQuery   *bquery = [BmobQuery queryWithClassName:@"Sources"];
+    BmobQuery * bquery = [BmobQuery queryWithClassName:@"Sources"];
     
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString * documentsPath = [paths firstObject];
     NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
     
     [bquery calcInBackgroundWithBlock:^(NSArray *array, NSError *error) {
         _dataSource = [NSMutableArray arrayWithArray:array];
         
-        for (NSDictionary * object in array)
+        [_dataSource sortWithKey:@"updatedAt" ascending:NO];
+        
+        for (NSDictionary * object in _dataSource)
         {
             NSString * designerName = [object objectForKey:@"ImageUrl"];
             NSString * filePath = [documentsPath stringByAppendingString:[NSString stringWithFormat:@"/%@",designerName]];

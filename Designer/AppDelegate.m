@@ -19,6 +19,10 @@
 #define BombAppKey @"6cd4eb4177a9c555fd390704c67e5e2d"
 #define MobAppKey  @"571f6d0ce0f55a8343002562"
 
+//微信
+//ID  wx2d31830279beb91d
+//KEY 79546a6cc6c8ebc89ed4ef324af98451
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [Bmob registerWithAppKey:BombAppKey];

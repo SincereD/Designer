@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## AFNetworking
 
-Copyright (c) 2011–2015 Alamofire Software Foundation (http://alamofire.org/)
+Copyright (c) 2011–2016 Alamofire Software Foundation (http://alamofire.org/)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -28,7 +28,7 @@ THE SOFTWARE.
 
 The MIT License (MIT)
 
-Copyright (c) 2012-2015 qiniu.com
+Copyright (c) 2012-2016 qiniu.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -53,7 +53,7 @@ THE SOFTWARE.
 
 The MIT License (MIT)
 
-Copyright (c) 2011-2015 qiniu.com
+Copyright (c) 2011-2016 qiniu.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -76,7 +76,7 @@ THE SOFTWARE.
 
 ## SDWebImage
 
-Copyright (c) 2009 Olivier Poitrey <rs@dailymotion.com>
+Copyright (c) 2016 Olivier Poitrey rs@dailymotion.com
  
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -125,6 +125,11 @@ SOFTWARE.
 ## UMengAnalytics-NO-IDFA
 
 Copyright 2011 - 2015 UMeng.com. All rights reserved.
+
+
+## UMengSocial
+
+Copyright 2011 - 2016 UMeng.com. All rights reserved.
 
 
 ## YLGIFImage

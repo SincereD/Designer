@@ -39,7 +39,11 @@
 		C693C42E1CD0FC430039870F /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C693C42C1CD0FC430039870F /* InfoViewController.m */; };
 		C693C42F1CD0FC430039870F /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C693C42D1CD0FC430039870F /* InfoViewController.xib */; };
 		C693C4AB1CD25A7B0039870F /* DSAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C693C4AA1CD25A7B0039870F /* DSAnimation.m */; };
+		C69994CE1DB4AE1C00BD2466 /* NSMutableArray+DSSort.m in Sources */ = {isa = PBXBuildFile; fileRef = C69994CD1DB4AE1C00BD2466 /* NSMutableArray+DSSort.m */; };
 		C6C99F361CE7676900ECE842 /* DesignerData.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C99F351CE7676900ECE842 /* DesignerData.m */; };
+		C6CDC7461DC881490051201D /* Wi-Fi车.png in Resources */ = {isa = PBXBuildFile; fileRef = C6CDC7451DC881490051201D /* Wi-Fi车.png */; };
+		C6CDC74A1DC881D20051201D /* DSBreakIntoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CDC7481DC881D20051201D /* DSBreakIntoViewController.m */; };
+		C6CDC74B1DC881D20051201D /* DSBreakIntoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6CDC7491DC881D20051201D /* DSBreakIntoViewController.xib */; };
 		C6E3316F1CDC93FC00F00705 /* UIImage+DSImageColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E3316E1CDC93FC00F00705 /* UIImage+DSImageColor.m */; };
 		C6FC77A01CE20DFA00CD68F3 /* WawaSC.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6FC779F1CE20DFA00CD68F3 /* WawaSC.otf */; };
 		C6FC77A31CE46AA900CD68F3 /* GifWelcomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FC77A21CE46AA900CD68F3 /* GifWelcomViewController.m */; };
@@ -124,8 +128,14 @@
 		C693C42D1CD0FC430039870F /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
 		C693C4A91CD25A7B0039870F /* DSAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAnimation.h; sourceTree = "<group>"; };
 		C693C4AA1CD25A7B0039870F /* DSAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAnimation.m; sourceTree = "<group>"; };
+		C69994CC1DB4AE1C00BD2466 /* NSMutableArray+DSSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+DSSort.h"; sourceTree = "<group>"; };
+		C69994CD1DB4AE1C00BD2466 /* NSMutableArray+DSSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+DSSort.m"; sourceTree = "<group>"; };
 		C6C99F341CE7676900ECE842 /* DesignerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignerData.h; sourceTree = "<group>"; };
 		C6C99F351CE7676900ECE842 /* DesignerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignerData.m; sourceTree = "<group>"; };
+		C6CDC7451DC881490051201D /* Wi-Fi车.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wi-Fi车.png"; sourceTree = "<group>"; };
+		C6CDC7471DC881D20051201D /* DSBreakIntoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSBreakIntoViewController.h; sourceTree = "<group>"; };
+		C6CDC7481DC881D20051201D /* DSBreakIntoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSBreakIntoViewController.m; sourceTree = "<group>"; };
+		C6CDC7491DC881D20051201D /* DSBreakIntoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSBreakIntoViewController.xib; sourceTree = "<group>"; };
 		C6E3316D1CDC93FC00F00705 /* UIImage+DSImageColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DSImageColor.h"; sourceTree = "<group>"; };
 		C6E3316E1CDC93FC00F00705 /* UIImage+DSImageColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DSImageColor.m"; sourceTree = "<group>"; };
 		C6FC779F1CE20DFA00CD68F3 /* WawaSC.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WawaSC.otf; sourceTree = "<group>"; };
@@ -276,6 +286,8 @@
 				C693C4071CD0F5130039870F /* DSRequest.m */,
 				C693C4131CD0F8030039870F /* DSDevice.h */,
 				C693C4141CD0F8030039870F /* DSDevice.m */,
+				C69994CC1DB4AE1C00BD2466 /* NSMutableArray+DSSort.h */,
+				C69994CD1DB4AE1C00BD2466 /* NSMutableArray+DSSort.m */,
 				C6E3316D1CDC93FC00F00705 /* UIImage+DSImageColor.h */,
 				C6E3316E1CDC93FC00F00705 /* UIImage+DSImageColor.m */,
 				C693C4151CD0F8040039870F /* NSString+URLString.h */,
@@ -320,9 +332,13 @@
 		C6FC77A61CE46BF400CD68F3 /* LaunchGif */ = {
 			isa = PBXGroup;
 			children = (
+				C6CDC7451DC881490051201D /* Wi-Fi车.png */,
 				C6FC77A71CE4866E00CD68F3 /* LaunchGif.gif */,
 				C6FC77A11CE46AA900CD68F3 /* GifWelcomViewController.h */,
 				C6FC77A21CE46AA900CD68F3 /* GifWelcomViewController.m */,
+				C6CDC7471DC881D20051201D /* DSBreakIntoViewController.h */,
+				C6CDC7481DC881D20051201D /* DSBreakIntoViewController.m */,
+				C6CDC7491DC881D20051201D /* DSBreakIntoViewController.xib */,
 			);
 			name = LaunchGif;
 			sourceTree = "<group>";
@@ -436,12 +452,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C63533AC1CC5E5BE00D5AA60 /* Build configuration list for PBXNativeTarget "Designer" */;
 			buildPhases = (
-				AAF163D11582E2484781A3A1 /* 📦 Check Pods Manifest.lock */,
+				AAF163D11582E2484781A3A1 /* [CP] Check Pods Manifest.lock */,
 				C63533911CC5E5BE00D5AA60 /* Sources */,
 				C63533921CC5E5BE00D5AA60 /* Frameworks */,
 				C63533931CC5E5BE00D5AA60 /* Resources */,
-				C4D1C55FC57DF1E3AAE9A5B3 /* 📦 Embed Pods Frameworks */,
-				7054FED3A32AC2AAD946E992 /* 📦 Copy Pods Resources */,
+				C4D1C55FC57DF1E3AAE9A5B3 /* [CP] Embed Pods Frameworks */,
+				7054FED3A32AC2AAD946E992 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -492,6 +508,7 @@
 			files = (
 				C6FC77D51CE4895B00CD68F3 /* 保留.png in Resources */,
 				C6FC77CE1CE4895B00CD68F3 /* 不知道.png in Resources */,
+				C6CDC7461DC881490051201D /* Wi-Fi车.png in Resources */,
 				C6FC77C81CE4895B00CD68F3 /* email.png in Resources */,
 				C6FF989B1CEE9BF200D2E03A /* 关于@2x.png in Resources */,
 				C6FC77CC1CE4895B00CD68F3 /* 二级页面和分享状态.png in Resources */,
@@ -500,6 +517,7 @@
 				C6FC77CA1CE4895B00CD68F3 /* wechat.png in Resources */,
 				C6FC77C91CE4895B00CD68F3 /* Friends Circle.png in Resources */,
 				C6FC77D81CE4895B00CD68F3 /* 动效app.png in Resources */,
+				C6CDC74B1DC881D20051201D /* DSBreakIntoViewController.xib in Resources */,
 				C6FC77A81CE4866E00CD68F3 /* LaunchGif.gif in Resources */,
 				C6FC77CF1CE4895B00CD68F3 /* 二级页面和分享.png in Resources */,
 				C63533A81CC5E5BE00D5AA60 /* LaunchScreen.storyboard in Resources */,
@@ -522,14 +540,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7054FED3A32AC2AAD946E992 /* 📦 Copy Pods Resources */ = {
+		7054FED3A32AC2AAD946E992 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,29 +555,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Designer/Pods-Designer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AAF163D11582E2484781A3A1 /* 📦 Check Pods Manifest.lock */ = {
+		AAF163D11582E2484781A3A1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C4D1C55FC57DF1E3AAE9A5B3 /* 📦 Embed Pods Frameworks */ = {
+		C4D1C55FC57DF1E3AAE9A5B3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +597,7 @@
 				C693C40C1CD0F5EA0039870F /* MainViewController.m in Sources */,
 				C693C4081CD0F5130039870F /* DSRequest.m in Sources */,
 				C6FC77E11CE48A2000CD68F3 /* InfoData.m in Sources */,
+				C69994CE1DB4AE1C00BD2466 /* NSMutableArray+DSSort.m in Sources */,
 				C635339D1CC5E5BE00D5AA60 /* AppDelegate.m in Sources */,
 				C693C4291CD0F8040039870F /* UIView+DSCapture.m in Sources */,
 				C693C4281CD0F8040039870F /* UIScreen+DSScreenSize.m in Sources */,
@@ -588,6 +607,7 @@
 				C6E3316F1CDC93FC00F00705 /* UIImage+DSImageColor.m in Sources */,
 				C693C42A1CD0F8040039870F /* DSBaseViewController.m in Sources */,
 				C6FF98B51CEEE83E00D2E03A /* DesignerView.m in Sources */,
+				C6CDC74A1DC881D20051201D /* DSBreakIntoViewController.m in Sources */,
 				C693C42E1CD0FC430039870F /* InfoViewController.m in Sources */,
 				C635339A1CC5E5BE00D5AA60 /* main.m in Sources */,
 				C693C4241CD0F8040039870F /* NSString+URLString.m in Sources */,
@@ -716,6 +736,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = YKB66Z3T3Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Designer",
@@ -739,6 +760,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = YKB66Z3T3Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Designer",
