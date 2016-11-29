@@ -68,18 +68,13 @@
     if (!_designerInfoView)
     {
         _designerInfoView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenWidth * GIFScale, kScreenWidth, kScreenWidth * GIFScale/4)];
-        [_designerInfoView setBackgroundColor:_bgColor];
         
-        UIColor * textColor;
-        if ([_bgColor isDarkColor]) {
-            textColor =  [UIColor whiteColor];
-        }else{
-            textColor =  [UIColor blackColor];
-        }
-        
+        UIColor * color = [UIColor colorWithRed:arc4random_uniform(255)/265.0 green:arc4random_uniform(255)/265.0 blue:arc4random_uniform(255)/265.0 alpha:1];
+        [_designerInfoView setBackgroundColor:color];
+
         UILabel * userRightLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 60)];
         [userRightLab setText:_data.designerName];
-        [userRightLab setTextColor:textColor];
+        [userRightLab setTextColor:[UIColor whiteColor]];
         [_designerInfoView addSubview:userRightLab];
     }
     
