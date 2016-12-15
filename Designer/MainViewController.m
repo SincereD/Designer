@@ -253,10 +253,21 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    DesignerView * design = (DesignerView*)_dataCellSource[indexPath.section];
+
     if (_currentSection == indexPath.section)
     {
+        [design stopShaking];
+        _currentSection = -1;
+        _lastSection = -1;
+        _lastDesignerView = nil;
+        
+        [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationFade];
+        [_table scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
         return;
     }
+    
     _currentSection = indexPath.section;
     
     if (_lastSection != -1)
@@ -264,8 +275,6 @@
         [tableView reloadSections:[NSIndexSet indexSetWithIndex:_lastSection] withRowAnimation:UITableViewRowAnimationFade];
     }
     [tableView reloadSections:[NSIndexSet indexSetWithIndex:_currentSection] withRowAnimation:UITableViewRowAnimationFade];
-    
-    DesignerView * design = (DesignerView*)_dataCellSource[indexPath.section];
     
     if (!_lastDesignerView)
     {
@@ -283,6 +292,8 @@
     }
     _lastDesignerView =  design;
     _lastSection = indexPath.section;
+
+    [_table scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
 @end
