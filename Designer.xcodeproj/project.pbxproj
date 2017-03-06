@@ -40,6 +40,9 @@
 		C693C42F1CD0FC430039870F /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C693C42D1CD0FC430039870F /* InfoViewController.xib */; };
 		C693C4AB1CD25A7B0039870F /* DSAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C693C4AA1CD25A7B0039870F /* DSAnimation.m */; };
 		C69994CE1DB4AE1C00BD2466 /* NSMutableArray+DSSort.m in Sources */ = {isa = PBXBuildFile; fileRef = C69994CD1DB4AE1C00BD2466 /* NSMutableArray+DSSort.m */; };
+		C6C2928C1E665DAF00C6A2B4 /* ActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C2928B1E665DAF00C6A2B4 /* ActionViewController.m */; };
+		C6C2928F1E665DAF00C6A2B4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C2928D1E665DAF00C6A2B4 /* MainInterface.storyboard */; };
+		C6C292931E665DAF00C6A2B4 /* DesignerAction.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C6C292881E665DAE00C6A2B4 /* DesignerAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C6C99F361CE7676900ECE842 /* DesignerData.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C99F351CE7676900ECE842 /* DesignerData.m */; };
 		C6CDC7461DC881490051201D /* Wi-Fi车.png in Resources */ = {isa = PBXBuildFile; fileRef = C6CDC7451DC881490051201D /* Wi-Fi车.png */; };
 		C6CDC74A1DC881D20051201D /* DSBreakIntoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CDC7481DC881D20051201D /* DSBreakIntoViewController.m */; };
@@ -74,6 +77,30 @@
 		C6FF98B11CEEB68B00D2E03A /* DesignerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6FF98AF1CEEB68B00D2E03A /* DesignerTableViewCell.xib */; };
 		C6FF98B51CEEE83E00D2E03A /* DesignerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FF98B41CEEE83E00D2E03A /* DesignerView.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C6C292911E665DAF00C6A2B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C635338D1CC5E5BE00D5AA60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6C292871E665DAE00C6A2B4;
+			remoteInfo = DesignerAction;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C6C292831E665ACA00C6A2B4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C6C292931E665DAF00C6A2B4 /* DesignerAction.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		36BFF792F301C9EB1D79ABB2 /* Pods-Designer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Designer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Designer/Pods-Designer.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +157,11 @@
 		C693C4AA1CD25A7B0039870F /* DSAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAnimation.m; sourceTree = "<group>"; };
 		C69994CC1DB4AE1C00BD2466 /* NSMutableArray+DSSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+DSSort.h"; sourceTree = "<group>"; };
 		C69994CD1DB4AE1C00BD2466 /* NSMutableArray+DSSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+DSSort.m"; sourceTree = "<group>"; };
+		C6C292881E665DAE00C6A2B4 /* DesignerAction.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DesignerAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6C2928A1E665DAF00C6A2B4 /* ActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionViewController.h; sourceTree = "<group>"; };
+		C6C2928B1E665DAF00C6A2B4 /* ActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionViewController.m; sourceTree = "<group>"; };
+		C6C2928E1E665DAF00C6A2B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		C6C292901E665DAF00C6A2B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6C99F341CE7676900ECE842 /* DesignerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignerData.h; sourceTree = "<group>"; };
 		C6C99F351CE7676900ECE842 /* DesignerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignerData.m; sourceTree = "<group>"; };
 		C6CDC7451DC881490051201D /* Wi-Fi车.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wi-Fi车.png"; sourceTree = "<group>"; };
@@ -195,6 +227,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C6C292851E665DAE00C6A2B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -211,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				C63533971CC5E5BE00D5AA60 /* Designer */,
+				C6C292891E665DAF00C6A2B4 /* DesignerAction */,
 				C63533961CC5E5BE00D5AA60 /* Products */,
 				29E4570AC6338DDB187D009C /* Pods */,
 				C9B42F3AB62DD59A2A3E7B29 /* Frameworks */,
@@ -221,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				C63533951CC5E5BE00D5AA60 /* Designer.app */,
+				C6C292881E665DAE00C6A2B4 /* DesignerAction.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -308,6 +349,17 @@
 				C693C4221CD0F8040039870F /* DSBaseViewController.m */,
 			);
 			name = DSCommon;
+			sourceTree = "<group>";
+		};
+		C6C292891E665DAF00C6A2B4 /* DesignerAction */ = {
+			isa = PBXGroup;
+			children = (
+				C6C2928A1E665DAF00C6A2B4 /* ActionViewController.h */,
+				C6C2928B1E665DAF00C6A2B4 /* ActionViewController.m */,
+				C6C2928D1E665DAF00C6A2B4 /* MainInterface.storyboard */,
+				C6C292901E665DAF00C6A2B4 /* Info.plist */,
+			);
+			path = DesignerAction;
 			sourceTree = "<group>";
 		};
 		C6C99F311CE7673300ECE842 /* DesignerCell */ = {
@@ -458,15 +510,34 @@
 				C63533931CC5E5BE00D5AA60 /* Resources */,
 				C4D1C55FC57DF1E3AAE9A5B3 /* [CP] Embed Pods Frameworks */,
 				7054FED3A32AC2AAD946E992 /* [CP] Copy Pods Resources */,
+				C6C292831E665ACA00C6A2B4 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C6C292921E665DAF00C6A2B4 /* PBXTargetDependency */,
 			);
 			name = Designer;
 			productName = Designer;
 			productReference = C63533951CC5E5BE00D5AA60 /* Designer.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C6C292871E665DAE00C6A2B4 /* DesignerAction */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6C292941E665DAF00C6A2B4 /* Build configuration list for PBXNativeTarget "DesignerAction" */;
+			buildPhases = (
+				C6C292841E665DAE00C6A2B4 /* Sources */,
+				C6C292851E665DAE00C6A2B4 /* Frameworks */,
+				C6C292861E665DAE00C6A2B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DesignerAction;
+			productName = DesignerAction;
+			productReference = C6C292881E665DAE00C6A2B4 /* DesignerAction.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -480,6 +551,11 @@
 					C63533941CC5E5BE00D5AA60 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = YKB66Z3T3Q;
+					};
+					C6C292871E665DAE00C6A2B4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = YKB66Z3T3Q;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -497,6 +573,7 @@
 			projectRoot = "";
 			targets = (
 				C63533941CC5E5BE00D5AA60 /* Designer */,
+				C6C292871E665DAE00C6A2B4 /* DesignerAction */,
 			);
 		};
 /* End PBXProject section */
@@ -534,6 +611,14 @@
 				C693C42F1CD0FC430039870F /* InfoViewController.xib in Resources */,
 				C6FC77C71CE4895B00CD68F3 /* designer.png in Resources */,
 				C6FF989E1CEEA85900D2E03A /* Loading.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6C292861E665DAE00C6A2B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6C2928F1E665DAF00C6A2B4 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,7 +706,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C6C292841E665DAE00C6A2B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6C2928C1E665DAF00C6A2B4 /* ActionViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C6C292921E665DAF00C6A2B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6C292871E665DAE00C6A2B4 /* DesignerAction */;
+			targetProxy = C6C292911E665DAF00C6A2B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C63533A11CC5E5BE00D5AA60 /* Main.storyboard */ = {
@@ -638,6 +739,14 @@
 				C63533A71CC5E5BE00D5AA60 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C6C2928D1E665DAF00C6A2B4 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6C2928E1E665DAF00C6A2B4 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -779,6 +888,38 @@
 			};
 			name = Release;
 		};
+		C6C292951E665DAF00C6A2B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = YKB66Z3T3Q;
+				INFOPLIST_FILE = DesignerAction/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dy.Animation.DesignerAction;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C6C292961E665DAF00C6A2B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = YKB66Z3T3Q;
+				INFOPLIST_FILE = DesignerAction/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dy.Animation.DesignerAction;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -799,6 +940,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C6C292941E665DAF00C6A2B4 /* Build configuration list for PBXNativeTarget "DesignerAction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6C292951E665DAF00C6A2B4 /* Debug */,
+				C6C292961E665DAF00C6A2B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

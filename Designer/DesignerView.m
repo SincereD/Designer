@@ -65,23 +65,23 @@
 
 - (void)initDesignerInfoView
 {
-    if (!_designerInfoView)
-    {
-        _designerInfoView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenWidth * GIFScale, kScreenWidth, kScreenWidth * GIFScale/4)];
-        
-        UIColor * color = [UIColor colorWithRed:arc4random_uniform(255)/265.0 green:arc4random_uniform(255)/265.0 blue:arc4random_uniform(255)/265.0 alpha:1];
-        [_designerInfoView setBackgroundColor:color];
-
-        UILabel * userRightLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 60)];
-        [userRightLab setText:_data.designerName];
-        [userRightLab setTextColor:[UIColor whiteColor]];
-        [_designerInfoView addSubview:userRightLab];
-    }
+//    if (!_designerInfoView)
+//    {
+//        _designerInfoView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenWidth * GIFScale, kScreenWidth, kScreenWidth * GIFScale/4)];
+//        
+//        UIColor * color = [UIColor colorWithRed:arc4random_uniform(255)/265.0 green:arc4random_uniform(255)/265.0 blue:arc4random_uniform(255)/265.0 alpha:1];
+//        [_designerInfoView setBackgroundColor:color];
+//
+//        UILabel * userRightLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 60)];
+//        [userRightLab setText:_data.designerName];
+//        [userRightLab setTextColor:[UIColor whiteColor]];
+//        [_designerInfoView addSubview:userRightLab];
+//    }
     
     if (!_shareBtn)
     {
         _shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_shareBtn setFrame:CGRectMake(kScreenWidth - 60, kScreenWidth * GIFScale - 20, 40, 40)];
+        [_shareBtn setFrame:CGRectMake(kScreenWidth - 60, kScreenWidth * GIFScale - 50, 40, 40)];
         [_shareBtn setImage:[UIImage imageNamed:@"分享图标.png"] forState:UIControlStateNormal];
         [_shareBtn setImage:[UIImage imageNamed:@"关闭分享.png"] forState:UIControlStateSelected];
         [_shareBtn setImageEdgeInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
@@ -91,17 +91,42 @@
         [_shareBtn addTarget:self action:@selector(shareAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     
-    [self addSubview:_designerInfoView];
+    _shareBtn.alpha = 0.0f;
+    
+    _shareBtn.transform = CGAffineTransformIdentity;
+    
     [self addSubview:_shareBtn];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+       
+        _shareBtn.alpha = 1.0f;
+    }];
 }
 
 - (void)shareAction:(UIButton*)sender
 {
-    sender.selected = !sender.selected;
     
-    [UIView animateWithDuration:0.8f animations:^{
-        sender.transform = CGAffineTransformRotate(sender.transform, M_PI);
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        sender.transform = CGAffineTransformScale(sender.transform, 1.3, 1.3);
+
     } completion:^(BOOL finished) {
+        
+//        [self shareTo:sender];
+        
+        [self activity];
+        
+    }];
+}
+
+- (void)shareTo:(UIButton*)sender{
+    
+    [UIView animateWithDuration:0.3 animations:^{
+    
+        sender.transform = CGAffineTransformScale(sender.transform, 0.01, 0.01);
+    
+    } completion:^(BOOL finished) {
+        
         NSLog(@"%@",self.data.serverURL);
         
         UMShareEmotionObject * obj = [UMShareEmotionObject shareObjectWithTitle:@"哈哈" descr:@"哈哈" thumImage:_normalImage];
@@ -123,6 +148,13 @@
     }];
 }
 
+- (void)activity{
+    
+    UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:@[_data.fileURL] applicationActivities:nil];
+    
+    [self.keyVC presentViewController:controller animated:YES completion:nil];
+}
+
 - (void)exchangeShakeState
 {
     if (_isShaking)
@@ -140,8 +172,8 @@
     [_gifImageView setImage:_gifImage];
     _isShaking = YES;
     [self sendSubviewToBack:_gifImageView];
-    [self bring];
-    [self showDesignerInfo];
+//    [self bring];
+//    [self showDesignerInfo];
 }
 
 - (void)stopShaking
@@ -171,6 +203,7 @@
         _coprightLab.alpha = 0.0f;
         _nameLab.alpha = 0.0f;
     } completion:^(BOOL finished) {
+        
         [self initDesignerInfoView];
     }];
 }

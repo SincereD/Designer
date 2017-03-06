@@ -28,7 +28,7 @@
     
     [Bmob registerWithAppKey:BombAppKey];
     
-    [[UMSocialManager defaultManager] openLog:YES];
+    [[UMSocialManager defaultManager] openLog:NO];
     [[UMSocialManager defaultManager] setUmSocialAppkey:UMAppKey];
     [[DSNetWork sharedNetWork] configureReachManager];
     

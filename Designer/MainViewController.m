@@ -15,6 +15,7 @@
 #import "DesignerData.h"
 #import "DesignerTableViewCell.h"
 #import "DesignerView.h"
+#import "UIView+DSCapture.h"
 
 @interface MainViewController ()<UIGestureRecognizerDelegate,UITableViewDelegate,UITableViewDataSource>
 {
@@ -38,18 +39,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
      self.title = @"一起摇摆";
     _currentSection = -1;
     _lastSection = -1;
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     _dataCellSource = [NSMutableArray arrayWithCapacity:0];
+    
     _loadingView = [[LoadingView alloc] init];
     
     [_loadingView showOnView:self.view];
     
     BmobQuery * bquery = [BmobQuery queryWithClassName:@"Sources"];
-    
+
     NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString * documentsPath = [paths firstObject];
     NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
@@ -78,6 +81,7 @@
             
         }
     }];
+
 }
 
 - (void)downLoadWithURL:(NSString*)url
@@ -219,12 +223,7 @@
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.section == _currentSection)
-    {
-        return kScreenWidth * GIFScale + 60;
-    }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     return kScreenWidth * GIFScale;
 }
